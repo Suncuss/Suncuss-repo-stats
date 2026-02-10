@@ -1,0 +1,17 @@
+name: Collect Repository Stats
+
+on:
+  schedule:
+    - cron: "0 23 * * *"
+  workflow_dispatch:
+
+jobs:
+  repo-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run github-repo-stats
+        uses: jgehrcke/github-repo-stats@v1
+        with:
+          repository: Suncuss/BirdNET-PiPy
+          ghtoken: ${{ secrets.TRAFFIC_TOKEN }}
+          databranch: traffic-data
