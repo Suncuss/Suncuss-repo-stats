@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run github-repo-stats
-        uses: jgehrcke/github-repo-stats@v1
+        uses: jgehrcke/github-repo-stats@v1.4.2
         with:
           repository: Suncuss/BirdNET-PiPy
           ghtoken: ${{ secrets.TRAFFIC_TOKEN }}
