@@ -1,5 +1,7 @@
 {
 "date": "2026-08-25",
-"errors": {},
-"generated": "2026-08-25T02:49:41+00:00"
+"errors": {
+"github": "HttpError: HTTP 403 for https://api.github.com/repos/Suncuss/BirdNET-PiPy/stargazers?per_page=100&page=1"
+},
+"generated": "2026-08-25T02:59:28+00:00"
 }
