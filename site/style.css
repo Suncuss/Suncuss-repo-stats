@@ -19,17 +19,13 @@ code { font-size: 13px; background: var(--gray-100); padding: 0 4px; border-radi
 
 /* Nav — App.vue: nav.bg-green-700.text-white.p-4 > .container > brand row (mb-2) + link row (flex flex-wrap gap-4) */
 .nav { background: var(--green-700); color: #fff; padding: 16px; }
-.nav .brand-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; gap: 16px; }
+.nav .brand-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .nav .brand { display: flex; align-items: baseline; gap: 8px; color: #fff; text-decoration: none; }
 .nav .brand:hover { color: var(--green-200); }
 .nav .brand .name { font-size: 24px; line-height: 32px; font-weight: 700; }
-.nav .brand .sub { font-size: 16px; line-height: 24px; font-weight: 400; color: var(--green-200); }
 .nav .aux { display: flex; align-items: center; gap: 4px; font-size: 14px; line-height: 20px; color: var(--green-200); text-decoration: none; }
 .nav .aux:hover { color: #fff; }
 .nav .aux svg { width: 16px; height: 16px; }
-.nav .links { display: flex; flex-wrap: wrap; gap: 16px; }
-.nav .links a { color: #fff; text-decoration: none; }
-.nav .links a:hover { color: var(--green-200); }
 
 main { padding: 16px 4px 32px; display: flex; flex-direction: column; gap: 16px; }
 .intro { margin: 0; font-size: 14px; line-height: 20px; color: var(--gray-500); }
