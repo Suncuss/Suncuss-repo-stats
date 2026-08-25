@@ -4,9 +4,7 @@
 "own_stations": 3,
 "station_image": "birdnet-pipy-frontend"
 },
-"errors": {
-"github": "HttpError: HTTP 403 for https://api.github.com/repos/Suncuss/BirdNET-PiPy/stargazers?per_page=100&page=1"
-},
+"errors": {},
 "estimate": {
 "ha": {
 "auto_update": 5,
@@ -57,13 +55,13 @@
 "mid": 323
 }
 },
-"generated": "2026-08-25T02:59:28+00:00",
+"generated": "2026-08-25T03:00:51+00:00",
 "ghcr": {
 "daily": [],
 "lifetime": {
 "birdnet-pipy-backend": 14580,
-"birdnet-pipy-frontend": 7701,
-"birdnet-pipy-icecast": 7390
+"birdnet-pipy-frontend": 7702,
+"birdnet-pipy-icecast": 7391
 },
 "releases": [
 {
@@ -793,7 +791,7 @@
 "staging"
 ],
 "created": "2026-08-21T04:22:13",
-"index": 161,
+"index": 162,
 "pulls": 88
 }
 ],
@@ -839,7 +837,7 @@
 "amd64": 29,
 "arm64": 59
 },
-"index": 157
+"index": 158
 }
 },
 "birdnet-pipy-icecast": {
@@ -861,7 +859,7 @@
 "amd64": 35,
 "arm64": 76
 },
-"index": 137
+"index": 138
 }
 }
 }
