@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BirdNET-PiPy adoption</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>📈</text></svg>">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="masthead">
+  <div>
+    <h1>BirdNET-PiPy adoption</h1>
+    <p class="sub">No telemetry exists, so everything here is inferred from public signals: GHCR pull counts, Home Assistant's opt-in analytics, Alex's add-on images and GitHub traffic. Estimates carry their assumptions with them.</p>
+  </div>
+  <div class="meta" id="meta">loading…</div>
+</header>
+
+<div id="errors" class="errors" hidden></div>
+
+<main>
+  <section id="headline" class="tiles" aria-label="Headline estimates"></section>
+
+  <section>
+    <h2>Estimated version distribution</h2>
+    <p class="note">Home Assistant is exact for installs that opted into HA analytics. Self-hosted is a cohort model: each release's station pulls are updaters drawn proportionally from stations on older releases; what exceeds that pool is new stations. <a href="#method">How this is computed</a>.</p>
+    <div class="grid two">
+      <figure><figcaption>Self-hosted stations by release <span class="tag">estimate</span></figcaption><div class="plot"><canvas id="c-self-dist"></canvas></div></figure>
+      <figure><figcaption>Home Assistant installs by add-on version <span class="tag">HA analytics, opt-in</span></figcaption><div class="plot"><canvas id="c-ha-dist"></canvas></div></figure>
+    </div>
+    <div class="grid two">
+      <figure><figcaption>Estimated active installs over time</figcaption><div class="plot"><canvas id="c-est-hist"></canvas></div></figure>
+      <figure><figcaption>Self-hosted release mix over time <span class="tag">estimate</span></figcaption><div class="plot"><canvas id="c-self-hist"></canvas></div></figure>
+    </div>
+    <details><summary>Table: latest distribution</summary><div id="t-dist"></div></details>
+  </section>
+
+  <section>
+    <h2>Self-hosted: GHCR image pulls</h2>
+    <p class="note">One <code>docker pull</code> increments the tag's index manifest and the platform manifest. Platform-manifest pulls of the <code>frontend</code> image are the cleanest "one station updated" counter (the backend image is pulled ~2.5× per station because three services use it). Releases marked <em>mixed</em> were built together with <code>staging</code> from identical content, so their pulls include staging-channel stations.</p>
+    <div class="grid two">
+      <figure><figcaption>Station pulls per release (frontend platform manifests)</figcaption><div class="plot tall"><canvas id="c-releases"></canvas></div></figure>
+      <figure><figcaption>Daily station pulls by release <span class="tag">from daily snapshots</span></figcaption><div class="plot tall"><canvas id="c-daily"></canvas></div></figure>
+    </div>
+    <details><summary>Table: releases</summary><div id="t-releases"></div></details>
+    <div class="grid two">
+      <figure><figcaption>Lifetime downloads per image (all manifests)</figcaption><div id="t-lifetime" class="table-wrap"></div></figure>
+      <figure><figcaption>Current tags (index GETs vs platform pulls)</figcaption><div id="t-tags" class="table-wrap"></div></figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>Home Assistant add-on</h2>
+    <p class="note">Two independent signals: HA analytics counts installs that opted in (a minority), while pulls of Alex's per-arch add-on images count roughly one per install per add-on version, since the supervisor prompts updates within days.</p>
+    <div class="grid two">
+      <figure><figcaption>Pulls per add-on version (alexbelgium images)</figcaption><div class="plot"><canvas id="c-alex-versions"></canvas></div></figure>
+      <figure><figcaption>Alex's weekly stat: current-version pulls at snapshot</figcaption><div class="plot"><canvas id="c-alex-weekly"></canvas></div></figure>
+    </div>
+    <div class="grid two">
+      <figure><figcaption>HA analytics: reporting installs over time</figcaption><div class="plot"><canvas id="c-ha-hist"></canvas></div></figure>
+      <figure><figcaption>HA analytics context (reporting installs, same repo)</figcaption><div id="t-ha-ref" class="table-wrap"></div></figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>GitHub</h2>
+    <p class="note">Fresh installs <code>git clone</code> the repo; updates <code>git fetch</code>, which GitHub does not count. CI checkouts and the maintainer's machines are included, so unique cloners overstate installs. Traffic history is collected daily by <code>github-repo-stats</code> into this repo's <code>traffic-data</code> branch.</p>
+    <div class="grid two">
+      <figure><figcaption>Unique cloners and unique visitors per day</figcaption><div class="plot"><canvas id="c-traffic"></canvas></div></figure>
+      <figure><figcaption>Unique cloners per month</figcaption><div class="plot"><canvas id="c-traffic-month"></canvas></div></figure>
+    </div>
+    <div class="grid two">
+      <figure><figcaption>Stars (cumulative)</figcaption><div class="plot"><canvas id="c-stars"></canvas></div></figure>
+      <figure><figcaption>Issues opened per month</figcaption><div class="plot"><canvas id="c-issues"></canvas></div></figure>
+    </div>
+    <div id="t-community" class="table-wrap"></div>
+  </section>
+
+  <section id="method">
+    <h2>Method and caveats</h2>
+    <dl class="method">
+      <dt>Self-hosted station pulls</dt><dd>GitHub has no API for container download counts, so the collector scrapes each image's package "versions" page daily and resolves every digest through the registry (index / per-platform index / platform manifest / attestation). Digests sharing platform manifests are one build batch. A batch is <em>main</em> if its index carried the <code>main</code> tag in a daily snapshot, otherwise by proximity to a successful <code>main</code> CI run; the release label is the newest git tag at build time. Images carry no labels, so historical batches built together with staging (identical content) are <em>mixed</em>.</dd>
+      <dt>Self-hosted estimate</dt><dd>Per release, station pulls minus <span id="m-own"></span> maintainer stations. Walking releases in order, pulls drain proportionally from the pool of stations on older releases; the excess is new stations. Stations whose last pull is older than <span id="m-window"></span> days are shown as "not updating". Stations that never pull (local builds before the GHCR path, March 2026) are invisible.</dd>
+      <dt>Home Assistant estimate</dt><dd><code>max(</code>HA analytics reporting installs, pulls of the most recent add-on version that has been out ≥ 7 days<code>)</code>. Opt-in rate = reporting ÷ estimate.</dd>
+      <dt>Total</dt><dd>Self-hosted active + HA estimate; the band is ±30 % to reflect the unknowns above.</dd>
+      <dt>Daily series</dt><dd>Per-release daily pulls, HA history and the estimate history accumulate from the first snapshot (2026-08-25). Earlier points come from cumulative counts only.</dd>
+      <dt>Source</dt><dd><a href="https://github.com/Suncuss/Suncuss-repo-stats">Suncuss/Suncuss-repo-stats</a> — collector, raw snapshots under <code>data/</code>, and this page. <a href="data/dashboard.json">dashboard.json</a></dd>
+    </dl>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
