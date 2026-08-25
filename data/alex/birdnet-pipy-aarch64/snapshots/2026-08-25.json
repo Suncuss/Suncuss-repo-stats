@@ -7,12 +7,12 @@
 "rows": [
 [
 "04dd651061b33ec74db78f3a3d492189fb04dfd42127b4d080884ea0ce567c95",
-22,
+24,
 [
 "latest",
 "0.8.8"
 ],
-"3 days ago"
+"4 days ago"
 ],
 [
 "093bcce1bc53f7abee4871c5f9708086b3d96e254ff0000f20d1956472d0a9bc",
@@ -20,7 +20,7 @@
 [
 "0.8.6"
 ],
-"12 days ago"
+"13 days ago"
 ],
 [
 "5e9c53210c7bd0f6a2ba7ff713d910ced199cfce7eab76a22b736dc55527f0de",
@@ -423,5 +423,5 @@
 "7 months ago"
 ]
 ],
-"total": 2631
+"total": 2635
 }
