@@ -8,8 +8,9 @@ RETRY_STATUS = {429, 500, 502, 503, 504}
 
 
 class HttpError(Exception):
-    def __init__(self, url, code):
-        super().__init__(f"HTTP {code} for {url}")
+    def __init__(self, url, code, body=""):
+        detail = f" - {body.strip()[:200]}" if body else ""
+        super().__init__(f"HTTP {code} for {url}{detail}")
         self.code = code
 
 
@@ -27,7 +28,11 @@ def get(url, headers=None, retries=3, timeout=30, ok404=False):
             if e.code in RETRY_STATUS and attempt < retries - 1:
                 time.sleep(2 ** attempt * 2)
                 continue
-            raise HttpError(url, e.code) from e
+            try:
+                body = e.read().decode("utf-8", "replace")
+            except Exception:  # noqa: BLE001
+                body = ""
+            raise HttpError(url, e.code, body) from e
         except (urllib.error.URLError, TimeoutError) as e:
             if attempt < retries - 1:
                 time.sleep(2 ** attempt * 2)

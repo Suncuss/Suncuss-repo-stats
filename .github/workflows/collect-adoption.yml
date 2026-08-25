@@ -28,7 +28,9 @@ jobs:
       - name: Run collector
         id: collect
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          # TRAFFIC_TOKEN is the PAT github-repo-stats uses; the workflow token
+          # gets 403s on some cross-repo endpoints (e.g. stargazers).
+          GITHUB_TOKEN: ${{ secrets.TRAFFIC_TOKEN || github.token }}
         run: python -m collector.run
         continue-on-error: true
       - name: Commit snapshots
