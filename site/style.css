@@ -1,50 +1,84 @@
+/* BirdNET-PiPy visual vocabulary (Tailwind defaults as used by the app; light only, like the app). */
 :root {
   color-scheme: light;
-  --surface: #fcfcfb; --surface-2: #f3f2ee; --border: #e2e0da;
-  --text: #0b0b0b; --text-2: #52514e; --text-3: #7a7873;
-  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4; --s6: #008300; --s7: #4a3aa7; --s8: #e34948;
-  --grid: #e8e6e0; --critical: #d03b3b;
-  --ramp: #86b6ef,#6da7ec,#5598e7,#3987e5,#2a78d6,#256abf,#1c5cab,#184f95,#104281,#0d366b;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --surface: #1a1a19; --surface-2: #242423; --border: #33332f;
-    --text: #ffffff; --text-2: #c3c2b7; --text-3: #8f8e86;
-    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #008300; --s7: #9085e9; --s8: #e66767;
-    --grid: #2c2c2a;
-    --ramp: #cde2fb,#b7d3f6,#9ec5f4,#86b6ef,#6da7ec,#5598e7,#3987e5,#2a78d6,#256abf,#184f95;
-  }
+  --gray-50: #f9fafb; --gray-100: #f3f4f6; --gray-200: #e5e7eb; --gray-300: #d1d5db; --gray-400: #9ca3af;
+  --gray-500: #6b7280; --gray-600: #4b5563; --gray-700: #374151; --gray-900: #111827;
+  --green-700: #15803d; --green-600: #16a34a; --green-200: #bbf7d0; --green-100: #dcfce7;
+  --blue-100: #dbeafe; --blue-600: #2563eb; --blue-700: #1d4ed8;
+  --red-50: #fef2f2; --red-200: #fecaca; --red-600: #dc2626;
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, .05);
+  --font: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--surface); color: var(--text); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-a { color: var(--s1); }
-code { font-size: 0.92em; background: var(--surface-2); padding: 0 .3em; border-radius: 3px; }
-.masthead { display: flex; gap: 2rem; justify-content: space-between; align-items: flex-start; padding: 2rem clamp(1rem, 4vw, 3rem) 1rem; border-bottom: 1px solid var(--border); }
-.masthead h1 { margin: 0 0 .4rem; font-size: 1.6rem; letter-spacing: -0.01em; }
-.sub { margin: 0; max-width: 62ch; color: var(--text-2); }
-.meta { text-align: right; color: var(--text-3); font-size: .85rem; white-space: nowrap; }
-.errors { margin: 1rem clamp(1rem, 4vw, 3rem) 0; padding: .6rem 1rem; border: 1px solid var(--critical); border-radius: 6px; color: var(--critical); }
-main { padding: 0 clamp(1rem, 4vw, 3rem) 3rem; max-width: 1400px; }
-section { margin-top: 2.5rem; }
-h2 { font-size: 1.2rem; margin: 0 0 .4rem; }
-.note { color: var(--text-2); max-width: 90ch; margin: 0 0 1rem; }
-.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
-.tile { background: var(--surface-2); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.1rem; }
-.tile .label { color: var(--text-2); font-size: .85rem; }
-.tile .value { font-size: 2rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.15; margin: .2rem 0; }
-.tile .hint { color: var(--text-3); font-size: .8rem; }
-.grid.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 1.2rem; margin-bottom: 1.2rem; }
-figure { margin: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: .8rem 1rem 1rem; min-width: 0; }
-figcaption { font-weight: 600; font-size: .95rem; margin-bottom: .5rem; }
-.tag { font-weight: 400; color: var(--text-3); font-size: .78rem; margin-left: .4rem; }
-.plot { position: relative; height: 260px; }
-.plot.tall { height: 320px; }
-.table-wrap { overflow-x: auto; }
-table { border-collapse: collapse; width: 100%; font-size: .88rem; font-variant-numeric: tabular-nums; }
-th, td { text-align: left; padding: .3rem .5rem; border-bottom: 1px solid var(--border); white-space: nowrap; }
-th { color: var(--text-2); font-weight: 600; }
-td.num, th.num { text-align: right; }
-details { margin: .5rem 0 1rem; } summary { cursor: pointer; color: var(--text-2); }
-.method dt { font-weight: 600; margin-top: .8rem; } .method dd { margin: .2rem 0 0; color: var(--text-2); max-width: 95ch; }
-.empty { color: var(--text-3); font-size: .9rem; padding: 2rem 0; text-align: center; }
+html { scrollbar-gutter: stable; }
+body { margin: 0; background: var(--gray-100); color: var(--gray-900); font: 16px/1.5 var(--font); -webkit-font-smoothing: antialiased; }
+a { color: var(--blue-600); } a:hover { color: var(--blue-700); }
+code { font-size: 13px; background: var(--gray-100); padding: 0 4px; border-radius: 4px; }
+.container { max-width: 1280px; margin: 0 auto; }
+
+/* Nav — App.vue: nav.bg-green-700.text-white.p-4 > .container > brand row (mb-2) + link row (flex flex-wrap gap-4) */
+.nav { background: var(--green-700); color: #fff; padding: 16px; }
+.nav .brand-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; gap: 16px; }
+.nav .brand { display: flex; align-items: baseline; gap: 8px; color: #fff; text-decoration: none; }
+.nav .brand:hover { color: var(--green-200); }
+.nav .brand .name { font-size: 24px; line-height: 32px; font-weight: 700; }
+.nav .brand .sub { font-size: 16px; line-height: 24px; font-weight: 400; color: var(--green-200); }
+.nav .aux { display: flex; align-items: center; gap: 4px; font-size: 14px; line-height: 20px; color: var(--green-200); text-decoration: none; }
+.nav .aux:hover { color: #fff; }
+.nav .aux svg { width: 16px; height: 16px; }
+.nav .links { display: flex; flex-wrap: wrap; gap: 16px; }
+.nav .links a { color: #fff; text-decoration: none; }
+.nav .links a:hover { color: var(--green-200); }
+
+main { padding: 16px 4px 32px; display: flex; flex-direction: column; gap: 16px; }
+.intro { margin: 0; font-size: 14px; line-height: 20px; color: var(--gray-500); }
+.errors { margin: 0; padding: 8px 16px; background: var(--red-50); border: 1px solid var(--red-200); border-radius: 8px; color: var(--red-600); font-size: 14px; line-height: 20px; }
+
+/* Cards — Dashboard.vue: bg-white rounded-lg shadow p-4; h2.text-lg.font-semibold */
+.card { background: #fff; border-radius: 8px; box-shadow: var(--shadow); padding: 16px; min-width: 0; }
+.card-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px; flex-wrap: wrap; }
+.card h2 { margin: 0; font-size: 18px; line-height: 28px; font-weight: 600; }
+.note { margin: 0 0 12px; font-size: 14px; line-height: 20px; color: var(--gray-500); max-width: 100ch; text-wrap: pretty; }
+h3 { margin: 0 0 6px; font-size: 14px; line-height: 20px; font-weight: 500; color: var(--gray-700); }
+h3 .muted { color: var(--gray-400); font-weight: 400; margin-left: 4px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; }
+.tile .label { font-size: 14px; line-height: 20px; color: var(--gray-500); }
+.tile .value { font-size: 30px; line-height: 36px; font-weight: 700; margin: 4px 0; letter-spacing: -0.01em; }
+.tile .hint { font-size: 12px; line-height: 16px; color: var(--gray-400); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 24px; align-items: start; }
+.grid.wide { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); }
+@media (max-width: 900px) { .grid.wide { grid-template-columns: minmax(0, 1fr); } }
+.stack { display: flex; flex-direction: column; gap: 16px; }
+figure { margin: 0; min-width: 0; }
+.plot { position: relative; height: 240px; }
+.plot.tall { height: 300px; }
+.empty { color: var(--gray-400); font-size: 14px; padding: 40px 0; text-align: center; }
+.caption { margin: 8px 0 0; font-size: 12px; line-height: 16px; color: var(--gray-400); }
+
+/* Tables — Table.vue: thead.bg-gray-50 border-b; th.text-xs.font-semibold.text-gray-600.uppercase.tracking-wider */
+.table-wrap { overflow-x: auto; border: 1px solid var(--gray-200); border-radius: 8px; }
+table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+thead { background: var(--gray-50); border-bottom: 1px solid var(--gray-200); }
+th { padding: 12px 16px; text-align: left; font-size: 12px; line-height: 16px; font-weight: 600; color: var(--gray-600); text-transform: uppercase; letter-spacing: .05em; white-space: nowrap; }
+td { padding: 10px 16px; font-size: 14px; line-height: 20px; color: var(--gray-900); border-top: 1px solid var(--gray-100); white-space: nowrap; }
+th.num, td.num { text-align: right; }
+details { margin-top: 12px; } summary { cursor: pointer; font-size: 14px; color: var(--gray-500); } summary:hover { color: var(--gray-700); }
+details .table-wrap { margin-top: 8px; }
+
+/* Period tabs (Observation Summary) and the pill segmented control (Recent Observations) */
+.tabs { display: flex; gap: 4px; }
+.tabs button { border: 0; background: none; font: inherit; padding: 4px 12px; font-size: 14px; line-height: 20px; border-radius: 6px; color: var(--gray-500); cursor: pointer; }
+.tabs button:hover { color: var(--gray-700); }
+.tabs button[aria-pressed="true"] { background: var(--blue-100); color: var(--blue-700); font-weight: 500; }
+.seg { display: inline-flex; align-items: center; background: var(--gray-100); border-radius: 9999px; padding: 2px; }
+.seg button { border: 0; background: none; font: inherit; padding: 4px 12px; font-size: 12px; line-height: 16px; font-weight: 500; border-radius: 9999px; color: var(--gray-500); cursor: pointer; transition: all .2s; }
+.seg button:hover { color: var(--gray-700); }
+.seg button[aria-pressed="true"] { background: #fff; color: var(--gray-900); box-shadow: var(--shadow-sm); }
+
+.method { margin: 0; display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 8px 24px; }
+.method dt { font-size: 14px; line-height: 20px; font-weight: 600; }
+.method dd { margin: 0; font-size: 14px; line-height: 20px; color: var(--gray-600); text-wrap: pretty; }
+@media (max-width: 640px) { .method { grid-template-columns: minmax(0, 1fr); } .method dd { margin-bottom: 8px; } }
+.footer { margin: 0; font-size: 12px; line-height: 16px; color: var(--gray-400); text-align: center; }
+.footer a { color: var(--gray-500); }
