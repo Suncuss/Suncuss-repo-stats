@@ -1,0 +1,467 @@
+{
+"date": "2026-09-01",
+"header": {
+"tagged": 57,
+"untagged": 81
+},
+"rows": [
+[
+"84089a2b4daf48a5f83cb04c049233599df1231a649b16718ca00351dc55365c",
+93,
+[
+"latest",
+"0.8.8"
+],
+"10 days ago"
+],
+[
+"f7a73cfd889bfec3e78f32d17cf7f7302eb76da5d5ff54ac226c838f53a4c071",
+90,
+[
+"0.8.6"
+],
+"19 days ago"
+],
+[
+"a703efe4ff1e019a094d2a53fa5d17b6e79a8849a3e42aaeeb8f3ee5267f1c30",
+30,
+[
+"0.8.5"
+],
+"29 days ago"
+],
+[
+"c2fba6625868409ddeff749e4ac08fef117d7b5109a7f2513a56496ef169cce6",
+109,
+[
+"0.8.4"
+],
+"about 2 months ago"
+],
+[
+"5b4fb0bff06d76a323db361f9c1c7e172c9a4ad1fe7c05cd06d603b7dc5d15e2",
+61,
+[
+"0.8.3"
+],
+"about 2 months ago"
+],
+[
+"2a3a2a23345e1f5e2bff676d5defdd120d7598908393dce33f9ee1e521b04465",
+86,
+[
+"0.8.2.1"
+],
+"about 2 months ago"
+],
+[
+"dfdd3566be3ebd8dc363795aa86f581d4cb93f23097037d31dec25edb44aa974",
+18,
+[
+"0.8.2-1"
+],
+"about 2 months ago"
+],
+[
+"0dfaa7301ffd429650a77437d3e17650970b975fc1cc82acc0eb60d1efeb5617",
+51,
+[
+"0.8.2"
+],
+"about 2 months ago"
+],
+[
+"fb587192dacc02bfb1a88d5649dbb0e2bd2611cf0d3217693697402c8b980482",
+97,
+[
+"0.7.5"
+],
+"2 months ago"
+],
+[
+"e8d3d3efd853a5768c2e8135f8a50ac3d68ae4caf3e4bbcadedcfe371d223cf7",
+99,
+[
+"0.7.4"
+],
+"3 months ago"
+],
+[
+"17ac424a28b3ecca762d485faa5e427ef7fce2cce09843f22fb6a85d00dcad70",
+71,
+[
+"0.7.3"
+],
+"3 months ago"
+],
+[
+"5d108aba5f940b2185948982b11c5eea5a90abae7d9dcf8aa0424bf04ce819c1",
+76,
+[
+"0.7.1"
+],
+"3 months ago"
+],
+[
+"42224c762f00702e5f65fca3e6a2cd327d8d4403143a78dadc3582ae074df405",
+57,
+[
+"0.7.0-1"
+],
+"3 months ago"
+],
+[
+"7d81feba75d8c14e4ab6e36ec82eb4817790010b77ac6d6f0d5ab9fb30f400e9",
+29,
+[
+"0.7.0"
+],
+"3 months ago"
+],
+[
+"ad2f110142cd05669091fe74b0fd8fbc7793768a4e4a8135bc13daa4b40dd8c6",
+61,
+[
+"0.6.10"
+],
+"4 months ago"
+],
+[
+"2d653da85a8060357df172b9ed2b873746d92278c49a4217223909b02397ed83",
+71,
+[
+"0.6.8"
+],
+"4 months ago"
+],
+[
+"c47400999af21479c4a003200f9e54e4f0915ce02b4e0709d96ee0d823bb4b09",
+42,
+[
+"0.6.6-4"
+],
+"4 months ago"
+],
+[
+"c505845de37e20398f9f044b0ac19ce43670f808a4d90f9bba4f0fd5dc0ca231",
+50,
+[
+"0.6.6-3"
+],
+"4 months ago"
+],
+[
+"9a98749c422189e0f5ef1d884fb3f33c5458e6f6a38ec60f88c2f1be4e260008",
+21,
+[
+"0.6.6-2"
+],
+"4 months ago"
+],
+[
+"20907aefee6c916f05fcb79c8053a66163755eecb84409c463e0ed31a313b536",
+53,
+[
+"0.6.6"
+],
+"4 months ago"
+],
+[
+"ef9a9a04ad727d9ecf596dbe8260ea7149b05d2f7fb5114b8a19551239423733",
+61,
+[
+"0.6.4"
+],
+"5 months ago"
+],
+[
+"e1e859cfa7392608018170ed37b4a8449d09f66dd8527c32d9b57793bda60e4d",
+25,
+[
+"0.6.3-3"
+],
+"5 months ago"
+],
+[
+"a31a774f041e477adaf014ce6f1b0a9e1b764d3398f8b0e743978cc59f2b2c48",
+36,
+[
+"0.6.3-2"
+],
+"5 months ago"
+],
+[
+"bf7113351d83a7abc8eea2a11ad04f4b170abe438a6a4dfa7f8a02742e58424a",
+53,
+[
+"0.6.3"
+],
+"5 months ago"
+],
+[
+"99564f909473868e83debae234c9dc4562d2b1673d5a38ad226c3b953f411969",
+58,
+[
+"0.6.2-2"
+],
+"5 months ago"
+],
+[
+"d61f88dfdf3eed62a0cd2fc6a51ec7ac1a5d6e101dbd06b6df1976800e7e3253",
+29,
+[
+"0.6.2"
+],
+"5 months ago"
+],
+[
+"1c761a486223c575559f161bb7468b25a3e06be53a5b5b3de9093f95120507f9",
+66,
+[
+"0.6.1"
+],
+"5 months ago"
+],
+[
+"12442476d7f74bf04a1618adf4fb4d6096ec4f7ab3829965201a9ea42a61799d",
+50,
+[
+"0.6.0"
+],
+"5 months ago"
+],
+[
+"d13605a28f6721788602c83cb493e5ffb06609527f73fc6e42184cf2f6156e76",
+73,
+[
+"0.5.8"
+],
+"5 months ago"
+],
+[
+"a89e4109a11bf5eba9a2b024566f9598410e36e234aa2eaed3a1110ee25b9c18",
+75,
+[
+"0.5.7"
+],
+"6 months ago"
+],
+[
+"82ee53a7dfa9b32478e0cfe4381a67d7ed39fecba9f873173719d076ed343b99",
+38,
+[
+"0.5.6-3"
+],
+"6 months ago"
+],
+[
+"18c0107efa788a591816038678f64a8516427fe3ef05dabb54751146ab708cc0",
+27,
+[
+"0.5.6-2"
+],
+"6 months ago"
+],
+[
+"dc27137599ed63c08b1a7cbe18a227ca1d9cbc0365ecee0bb2897825761bd69c",
+52,
+[
+"0.5.6"
+],
+"6 months ago"
+],
+[
+"71c2e4bfed12515777928861ebbea5649b12ff75efef17f5b12708b3af91b560",
+36,
+[
+"0.5.5-2"
+],
+"6 months ago"
+],
+[
+"cdb83f1698cef8a71ed7b5639b559a9fb44356be2acb437f25ca1aede2a81d88",
+24,
+[
+"0.5.5"
+],
+"6 months ago"
+],
+[
+"e79a5033e1027dcc7ba64506f92def29fdc73a628c9612874a1e5f9fa75afd64",
+40,
+[
+"0.5.4-3"
+],
+"6 months ago"
+],
+[
+"c411c2cd80e85f8aba3b3f109c74853f5128c664d83af2d653835a77671f64c1",
+25,
+[
+"0.5.4-2"
+],
+"6 months ago"
+],
+[
+"34f3781a548d75cc487e85c5e6457f9309da9e741a285a68234775941d54d930",
+33,
+[
+"0.5.4"
+],
+"6 months ago"
+],
+[
+"74f6658c73fbdbf923348b7aa38d25780b21d87ef2639d775b9ec066fe7db016",
+43,
+[
+"0.5.0-6"
+],
+"7 months ago"
+],
+[
+"eee47aefbe7b7c25ea7c752665647b671cba201a39e27f918b6f8a3ebbca1675",
+28,
+[
+"0.5.0-5"
+],
+"7 months ago"
+],
+[
+"5a3534f4c49ae69b2e43e940973fe42dde8671fe05847633c0365087c9d9147e",
+28,
+[
+"0.5.0-4"
+],
+"7 months ago"
+],
+[
+"65d4fc4ccb827339293688c039474baf256b34b7aafdb3f56ad317b7bc66b743",
+29,
+[
+"0.5.0-2"
+],
+"7 months ago"
+],
+[
+"a81a711462e9b649a8fb9f246d92dcf106f837901b2c3c13381c005418083711",
+27,
+[
+"0.5.0"
+],
+"7 months ago"
+],
+[
+"6e5a81a1c45705ff1328ccb48acdac209a2e6c123df8f52a9eabdb1b90247b2a",
+36,
+[
+"0.4.0"
+],
+"7 months ago"
+],
+[
+"0f0d55e812339652dce402bc03cc418da45ce76c0f17dfa2d8c85b7e51761094",
+29,
+[
+"0.3.2-6"
+],
+"7 months ago"
+],
+[
+"83298f08e2971f98159a7222b338f3d7fd36b376ece9f27399c69d29752e7bd2",
+26,
+[
+"0.3.2-5"
+],
+"7 months ago"
+],
+[
+"c4559ab5f150911627084909bc1862334e11880d2cf291fd2bed4168ce4b3f47",
+27,
+[
+"0.3.2-4"
+],
+"7 months ago"
+],
+[
+"d5c272794dc14ced80bbc667a7fb013cfa9ba3cacd848414d03035be33068c95",
+25,
+[
+"0.3.2-3"
+],
+"7 months ago"
+],
+[
+"f71cecfa95ddc08ead8c2fd1ef326c392262ccc42944c75140dd884101428b93",
+26,
+[
+"0.3.2-2"
+],
+"7 months ago"
+],
+[
+"8c0115dc259fec1f4393dcdf219d9a21bad1f392308ffcd983b5ecdd418f8e93",
+32,
+[
+"0.3.2"
+],
+"7 months ago"
+],
+[
+"23e180a766989a2cfc0668d98b26710ae78b182c59e5ae5c8fb0dfafccd45d5e",
+26,
+[
+"0.6.5"
+],
+"7 months ago"
+],
+[
+"f4276e12fe216d9141fceb24b5753141981ccf3ebdc7d2a8911f56b364b77d46",
+25,
+[
+"0.6"
+],
+"7 months ago"
+],
+[
+"30169a7dfb68485e2c55509ec890d2a1e367291f6380eeef48713fac9c30a793",
+25,
+[
+"0.5"
+],
+"7 months ago"
+],
+[
+"d3545b5a7d7ea1fd3d0a2645acc3ce2e9286b279bc7eca3e8e5f075601d7ad1c",
+26,
+[
+"0.4"
+],
+"7 months ago"
+],
+[
+"2e74e1d1c7719699c2bb040a09dc4d113b4da63d1544d745b7b6136a9656c3f4",
+28,
+[
+"0.3"
+],
+"7 months ago"
+],
+[
+"d466b0e8d0a89d774c15a19b575f63817f117f8a42128c20831ad7ba9e9ecd8d",
+27,
+[
+"0.2"
+],
+"7 months ago"
+],
+[
+"5825a6e71a459ae38ea4a57574e2f60da2fc6ab8e9f054539c71262e6ed4b224",
+34,
+[
+"0.1"
+],
+"7 months ago"
+]
+],
+"total": 5011
+}
