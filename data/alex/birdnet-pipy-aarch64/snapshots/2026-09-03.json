@@ -1,0 +1,427 @@
+{
+"date": "2026-09-03",
+"header": {
+"tagged": 52,
+"untagged": 79
+},
+"rows": [
+[
+"04dd651061b33ec74db78f3a3d492189fb04dfd42127b4d080884ea0ce567c95",
+32,
+[
+"latest",
+"0.8.8"
+],
+"12 days ago"
+],
+[
+"093bcce1bc53f7abee4871c5f9708086b3d96e254ff0000f20d1956472d0a9bc",
+35,
+[
+"0.8.6"
+],
+"21 days ago"
+],
+[
+"5e9c53210c7bd0f6a2ba7ff713d910ced199cfce7eab76a22b736dc55527f0de",
+15,
+[
+"0.8.5"
+],
+"about 1 month ago"
+],
+[
+"9b1fdcf35175fa43bd7c463fb2a34740c953b2ad588034851cba8350e0d14e12",
+42,
+[
+"0.8.4"
+],
+"about 2 months ago"
+],
+[
+"ef13a0dba19fbc9cebc65a14db4528fd06f4287d204ddcaca3701d8be24fd87a",
+34,
+[
+"0.8.3"
+],
+"about 2 months ago"
+],
+[
+"14572e2c751683822c841817f1f35b84fe467b1a6b8146ac03663955d7115305",
+37,
+[
+"0.8.2.1"
+],
+"about 2 months ago"
+],
+[
+"fe8817fce5b3334e45b54716f6ceda149a731adcaa60f234ad8bd6001971456a",
+14,
+[
+"0.8.2-1"
+],
+"2 months ago"
+],
+[
+"2eb97bdf6184bc334700ae8abde74965b48c8387836cc139c7bde9f2b3d4ec24",
+19,
+[
+"0.8.2"
+],
+"2 months ago"
+],
+[
+"b86cb6bc3ecda44e8318df01272b38c9b07b41b9a393f90ce70c5de44758259b",
+31,
+[
+"0.7.5"
+],
+"2 months ago"
+],
+[
+"beca704e1a1fd07870483103eb609aab0590201081de7ed0579869c3a3ea2350",
+55,
+[
+"0.7.4"
+],
+"3 months ago"
+],
+[
+"986da374de82260812e8f478721cca8c4246f2179c8c1890a604bfe5713e22e8",
+36,
+[
+"0.7.3"
+],
+"3 months ago"
+],
+[
+"0aaf9de7ec941e088f7182747973503347bddd357c8bd40dd719b392137d3ca0",
+40,
+[
+"0.7.1"
+],
+"3 months ago"
+],
+[
+"9d9c66571ec5827c131f7dab32fc16b3e6c636b010b00988e87cbcc964abc2aa",
+32,
+[
+"0.7.0-1"
+],
+"4 months ago"
+],
+[
+"31220cd119fb8d1003fbc54fce78ea0d9befc01a07d953fb8d7e2e6bbdcb2931",
+16,
+[
+"0.7.0"
+],
+"4 months ago"
+],
+[
+"3c96df3370a9c7d5fc7fc0cca03bfceb18c8898a2581a2e5b6f78007f7c6a80c",
+25,
+[
+"0.6.10"
+],
+"4 months ago"
+],
+[
+"2ff245eacb06ba7303b716ec1f9c59095161fc0cb833a5d80a5bf92739b70f5f",
+35,
+[
+"0.6.8"
+],
+"4 months ago"
+],
+[
+"5a3c4fbce3ef610af6b83f0fdb5ff9963e2dc59827c77ddf0c1aa1bcc9e9a5ca",
+24,
+[
+"0.6.6-4"
+],
+"4 months ago"
+],
+[
+"71a3a42d031d500c71b67be8cc5125b3674045e8b57951b9480bae689d6f0cd5",
+29,
+[
+"0.6.6-3"
+],
+"4 months ago"
+],
+[
+"865aa4cc1a9974fe2b0afa547ec116b1557f4f68106abc8def391967ff884a6b",
+12,
+[
+"0.6.6-2"
+],
+"4 months ago"
+],
+[
+"cba4401eecf5d760904336bb39c98184b0c296c18b28eba8d1336bcf977340d7",
+33,
+[
+"0.6.6"
+],
+"4 months ago"
+],
+[
+"c10e92583387656605cef84c59be58854452858c3f56a38887e13a66b870d81a",
+38,
+[
+"0.6.4"
+],
+"5 months ago"
+],
+[
+"f57589f247b9cd93575b025c34276a4cdc5ea2053cca8d19bfcfe5f790a29cfb",
+17,
+[
+"0.6.3-3"
+],
+"5 months ago"
+],
+[
+"bb2f5026b8944fc563bef96bef643333545e283e2951831f950c79afe82254ad",
+19,
+[
+"0.6.3-2"
+],
+"5 months ago"
+],
+[
+"060f5ea86aa3ad4e3632d2cadf47c3910057fb765c62fab681991161da08212c",
+36,
+[
+"0.6.3"
+],
+"5 months ago"
+],
+[
+"2c84cba42e3c4a3f031d269132b725a776241a0690b22e5b52d6af6cf57c9073",
+34,
+[
+"0.6.2-2"
+],
+"5 months ago"
+],
+[
+"a8198f0b0b91d9158ae00e16ef16b02e65fbb473b663262df580b85b597f0e8b",
+18,
+[
+"0.6.2"
+],
+"5 months ago"
+],
+[
+"b94d7ed94fd4bcd6d1f094de0d5a9d15e6cbc6108daf0e6f5fa731d788f4f06c",
+30,
+[
+"0.6.1"
+],
+"5 months ago"
+],
+[
+"d594223c5adf990c70daed6edc461b694d9ca38aeb1d2866625e53d12010b00f",
+27,
+[
+"0.6.0"
+],
+"5 months ago"
+],
+[
+"9f876879025db5ab2952b83e7efb4f703214bf8e52ae263f90637e68f3a948dc",
+28,
+[
+"0.5.8"
+],
+"5 months ago"
+],
+[
+"1a13faa5db5835d61b809842d5bfc8fe3a5b459bf25b64058a84ef93db827ab3",
+27,
+[
+"0.5.6-2"
+],
+"6 months ago"
+],
+[
+"8ef14f85eba0605c9b1a6b0aab53762afd2788f2361b3e53a40808502d02ed28",
+27,
+[
+"0.5.5-2"
+],
+"6 months ago"
+],
+[
+"0eb8bdb0059503056b131df034bf2325f2b3e01bffde0d2a31d35d98b56f667d",
+20,
+[
+"0.5.5"
+],
+"6 months ago"
+],
+[
+"1e5135cad5928073f5a34970e65e795af54713b4aebe775fc12b87b6ceb83452",
+29,
+[
+"0.5.4-3"
+],
+"6 months ago"
+],
+[
+"582991dde3a3effeae65d24c868d1520c2decce19fa248df71b503ce7c70e490",
+20,
+[
+"0.5.4-2"
+],
+"6 months ago"
+],
+[
+"3b72cfef4742d512edbd046b20dbe054e452587d96968e42603fe8222c6a565c",
+29,
+[
+"0.5.4"
+],
+"6 months ago"
+],
+[
+"6a8d74a661c5809239e3d01d047a73d89be55d782545fb0625b4e69e984b40ed",
+33,
+[
+"0.5.0-6"
+],
+"7 months ago"
+],
+[
+"9ac7e4ca4ba3c158c45462e0337e35f9c948ab10bf6ce041137240d89f89e003",
+25,
+[
+"0.5.0-5"
+],
+"7 months ago"
+],
+[
+"184424e80648a991e091e74d111bf7b76bef78607e661f8f935e5e67c2c21e20",
+28,
+[
+"0.5.0-4"
+],
+"7 months ago"
+],
+[
+"fb9e2e2719a84ab2fd17558304b89c0915576be05c8d2e99dd2ddd8030496ea4",
+27,
+[
+"0.5.0-2"
+],
+"7 months ago"
+],
+[
+"cbdd127f15b3e7bd4bb2dd430940a17adee9196d4909566616a39e5744825e9b",
+25,
+[
+"0.5.0"
+],
+"7 months ago"
+],
+[
+"66ea1c0e6e427ea68b065cbdcbcc5d2c5b896f0c648753af0f5bfaeba4c3bf10",
+27,
+[
+"0.4.0"
+],
+"7 months ago"
+],
+[
+"fea52b321ba5c6c66bcad871d3f96e676029374f3b835ac079ef405fdcb8d9f3",
+26,
+[
+"0.3.2-6"
+],
+"7 months ago"
+],
+[
+"eae90915a1ad1127ce4abe8eed4745f90ab1a9a5f9567bf63a973b85567d3b3e",
+23,
+[
+"0.3.2-5"
+],
+"7 months ago"
+],
+[
+"b9c0007e030738f29dc2b9299b0cf0c139ea8d0292f1bb0d0ed5da0c6d282e1b",
+22,
+[
+"0.3.2-4"
+],
+"7 months ago"
+],
+[
+"6400be290cd63b675e12f11ecb3abf1094280e4859fd7905dc358039459c54cc",
+21,
+[
+"0.3.2-3"
+],
+"7 months ago"
+],
+[
+"edf0ed325bc4b109cfe1cd2a3f46f76905f7a24113eb25de9ee96b9215e6482a",
+21,
+[
+"0.3.2-2"
+],
+"7 months ago"
+],
+[
+"d0671efae15e636a6fae35af7318ac94d3796e40deb46b369344833a43ae6f21",
+24,
+[
+"0.3.2"
+],
+"7 months ago"
+],
+[
+"5988b86953363193af176490a61bbf2a3f7942dacff6e1356354c96c3ab42339",
+21,
+[
+"0.6.5"
+],
+"7 months ago"
+],
+[
+"06317f7ad9e84ad62b837e9dff09bc623f723073d17e89c8c5d5c6a2f8de49b6",
+23,
+[
+"0.6"
+],
+"7 months ago"
+],
+[
+"b6993cf0a2c441d9c633eb9ac3ee6c3cc929b6aad39d966334038bb47289e00e",
+22,
+[
+"0.5"
+],
+"7 months ago"
+],
+[
+"e6ed80c7214baaae24f0d75a380f05810fa18e276ec4983e6c59e87ccf6b6003",
+27,
+[
+"0.2"
+],
+"7 months ago"
+],
+[
+"3ac8630788b2e8f6621ec5c03adc548bb51e4e67878c476e504226025e424e16",
+28,
+[
+"0.1"
+],
+"7 months ago"
+]
+],
+"total": 2652
+}
