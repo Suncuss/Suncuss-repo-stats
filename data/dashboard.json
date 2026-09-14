@@ -10,11 +10,10 @@
 "auto_update": 5,
 "estimated": 151,
 "method": "max(HA analytics opt-in total, pulls of the most recent add-on version older than 7 days)",
-"opt_in_rate": 0.18,
+"opt_in_rate": 0.17,
 "pulls_base": 151,
-"reporting": 27,
+"reporting": 26,
 "versions": {
-"0.6.6-3": 1,
 "0.7.5": 1,
 "0.8.4": 1,
 "0.8.8": 24
@@ -235,32 +234,42 @@
 },
 {
 "date": "2026-09-13",
-"ha": 151,
+"ha": 27,
 "not_updating": 0,
 "on_release": {
 "v0.8.8": 257
 },
 "self_hosted": 257,
-"total": 408
+"total": 284
+},
+{
+"date": "2026-09-14",
+"ha": 151,
+"not_updating": 0,
+"on_release": {
+"v0.8.8": 279
+},
+"self_hosted": 279,
+"total": 430
 }
 ],
 "self_hosted": {
-"active": 257,
+"active": 279,
 "active_window_days": 90,
 "method": "cohort model on station-image platform pulls per release (main channel)",
 "not_updating": 0,
 "on_release": {
-"v0.8.8": 257
+"v0.8.8": 279
 },
 "own_stations_excluded": 3
 },
 "total": {
-"high": 530,
-"low": 286,
-"mid": 408
+"high": 559,
+"low": 301,
+"mid": 430
 }
 },
-"generated": "2026-09-13T01:22:33+00:00",
+"generated": "2026-09-14T01:33:23+00:00",
 "ghcr": {
 "daily": [
 {
@@ -484,12 +493,26 @@
 }
 },
 "since": "2026-09-12"
+},
+{
+"date": "2026-09-14",
+"pulls": {
+"staging": {
+"amd64": 2,
+"arm64": 6
+},
+"v0.8.8": {
+"amd64": 7,
+"arm64": 15
+}
+},
+"since": "2026-09-13"
 }
 ],
 "lifetime": {
-"birdnet-pipy-backend": 17952,
-"birdnet-pipy-frontend": 9229,
-"birdnet-pipy-icecast": 8912
+"birdnet-pipy-backend": 18150,
+"birdnet-pipy-frontend": 9334,
+"birdnet-pipy-icecast": 9010
 },
 "releases": [
 {
@@ -904,20 +927,20 @@
 },
 {
 "arch": {
-"amd64": 82,
-"arm64": 178
+"amd64": 89,
+"arm64": 193
 },
 "batches": 2,
 "created": "2026-08-21T04:22:12",
 "current": true,
-"days_live": 23.8,
-"index": 432,
+"days_live": 24.8,
+"index": 472,
 "mixed": true,
 "other_images": {
-"birdnet-pipy-backend": 711,
-"birdnet-pipy-icecast": 257
+"birdnet-pipy-backend": 766,
+"birdnet-pipy-icecast": 276
 },
-"pulls": 260,
+"pulls": 282,
 "release": "v0.8.8"
 }
 ],
@@ -940,7 +963,8 @@
 "2026-09-10",
 "2026-09-11",
 "2026-09-12",
-"2026-09-13"
+"2026-09-13",
+"2026-09-14"
 ],
 "staging": [
 {
@@ -1269,16 +1293,16 @@
 },
 {
 "arch": {
-"amd64": 3,
-"arm64": 4
+"amd64": 5,
+"arm64": 10
 },
-"attest": 8,
+"attest": 16,
 "branches": [
 "staging"
 ],
 "created": "2026-09-12T21:02:10",
-"index": 10,
-"pulls": 7
+"index": 22,
+"pulls": 15
 }
 ],
 "tags": {
@@ -1291,17 +1315,17 @@
 },
 "main": {
 "arch": {
-"amd64": 150,
-"arm64": 308
+"amd64": 168,
+"arm64": 345
 },
-"index": 481
+"index": 543
 },
 "staging": {
 "arch": {
-"amd64": 2,
-"arm64": 2
+"amd64": 6,
+"arm64": 12
 },
-"index": 3
+"index": 14
 }
 },
 "birdnet-pipy-frontend": {
@@ -1313,17 +1337,17 @@
 },
 "main": {
 "arch": {
-"amd64": 52,
-"arm64": 110
+"amd64": 59,
+"arm64": 125
 },
-"index": 282
+"index": 322
 },
 "staging": {
 "arch": {
-"amd64": 3,
-"arm64": 4
+"amd64": 5,
+"arm64": 10
 },
-"index": 3
+"index": 10
 }
 },
 "birdnet-pipy-icecast": {
@@ -1335,17 +1359,17 @@
 },
 "main": {
 "arch": {
-"amd64": 52,
-"arm64": 110
+"amd64": 58,
+"arm64": 123
 },
-"index": 283
+"index": 321
 },
 "staging": {
 "arch": {
-"amd64": 3,
-"arm64": 4
+"amd64": 5,
+"arm64": 10
 },
-"index": 3
+"index": 10
 }
 }
 }
@@ -3228,6 +3252,13 @@
 "date": "2026-09-11",
 "views": 12,
 "views_unique": 6
+},
+{
+"clones": 21,
+"clones_unique": 7,
+"date": "2026-09-12",
+"views": 16,
+"views_unique": 5
 }
 ],
 "monthly": [
@@ -3288,11 +3319,11 @@
 "views_unique": 117
 },
 {
-"clones": 65,
-"clones_unique": 37,
+"clones": 86,
+"clones_unique": 44,
 "month": "2026-09",
-"views": 91,
-"views_unique": 31
+"views": 107,
+"views_unique": 36
 }
 ]
 }
@@ -3325,19 +3356,19 @@
 },
 "0.3.2-2": {
 "aarch64": 21,
-"age_days": 210,
+"age_days": 240,
 "amd64": 26,
 "total": 47
 },
 "0.3.2-3": {
 "aarch64": 21,
-"age_days": 210,
+"age_days": 240,
 "amd64": 25,
 "total": 46
 },
 "0.3.2-4": {
 "aarch64": 22,
-"age_days": 210,
+"age_days": 240,
 "amd64": 27,
 "total": 49
 },
@@ -3633,7 +3664,7 @@
 },
 "0.8.8": {
 "aarch64": 40,
-"age_days": 22,
+"age_days": 23,
 "amd64": 111,
 "total": 151
 }
@@ -4008,14 +4039,23 @@
 "0.8.4": 1,
 "0.8.8": 24
 }
+},
+{
+"auto_update": 5,
+"date": "2026-09-14",
+"total": 26,
+"versions": {
+"0.7.5": 1,
+"0.8.4": 1,
+"0.8.8": 24
+}
 }
 ],
 "latest": {
 "auto_update": 5,
-"date": "2026-09-13",
-"total": 27,
+"date": "2026-09-14",
+"total": 26,
 "versions": {
-"0.6.6-3": 1,
 "0.7.5": 1,
 "0.8.4": 1,
 "0.8.8": 24
@@ -4023,9 +4063,9 @@
 },
 "reference": {
 "db21ed7f_battybirdnet-pi": 15,
-"db21ed7f_birdnet-go": 195,
+"db21ed7f_birdnet-go": 199,
 "db21ed7f_birdnet-pi": 53
 }
 },
-"today": "2026-09-13"
+"today": "2026-09-14"
 }
