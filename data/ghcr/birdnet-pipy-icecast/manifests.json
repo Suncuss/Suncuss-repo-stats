@@ -242,6 +242,27 @@
 ],
 "kind": "index"
 },
+"0d8bf3bc3002028e46614c9eeb68be2c4e08a2ababae108a6b92cf355572f77c": {
+"children": [
+{
+"arch": "amd64",
+"digest": "sha256:aaaef74a67f661f091e575eff3fc6eb71e1dac30ab41d9a3cf8b7b863db28f62"
+},
+{
+"arch": "attest",
+"digest": "sha256:8f69fc12bfed40fb63814321f447afe799e98a51ae4bc126272edcbdacd9a95a"
+},
+{
+"arch": "arm64",
+"digest": "sha256:97861529ec686a95ca96079611ce12fbe63fa47b3ade760837b1dcbdf11f1a3f"
+},
+{
+"arch": "attest",
+"digest": "sha256:1905e91bc9dbba3a09a0ad6bc29225bfde40e75509a0a13735ea67391f28c2e1"
+}
+],
+"kind": "index"
+},
 "0df325573c05d263d5b0490b9838c9852440f4857dd6fc8b2748dff73fe62773": {
 "children": [
 {
@@ -434,6 +455,9 @@
 "kind": "attest"
 },
 "1901395f60cad8dff492ac79a49df0bc336a7f88ccddd00ce04e033faec4ddbc": {
+"kind": "attest"
+},
+"1905e91bc9dbba3a09a0ad6bc29225bfde40e75509a0a13735ea67391f28c2e1": {
 "kind": "attest"
 },
 "19524ab3ae9859ea9ead0f89fe980f77e17913b030c81006086688f12afaacab": {
@@ -2082,6 +2106,9 @@
 ],
 "kind": "pidx"
 },
+"8f69fc12bfed40fb63814321f447afe799e98a51ae4bc126272edcbdacd9a95a": {
+"kind": "attest"
+},
 "8fc6355c38d0cae61e3083c39964566784e4e9b54621618aa33f2ccdcd500eec": {
 "children": [
 {
@@ -2265,6 +2292,19 @@
 },
 "9a9adbdfbc0170a0a9409dbc07b3d1d633421ee269f1666d2df105775642c821": {
 "kind": "attest"
+},
+"9ae30dbe5d68a78704e530079d089cf650c9a458ad801bac7935e5d882179728": {
+"children": [
+{
+"arch": "amd64",
+"digest": "sha256:aaaef74a67f661f091e575eff3fc6eb71e1dac30ab41d9a3cf8b7b863db28f62"
+},
+{
+"arch": "attest",
+"digest": "sha256:8f69fc12bfed40fb63814321f447afe799e98a51ae4bc126272edcbdacd9a95a"
+}
+],
+"kind": "pidx"
 },
 "9b07468eeba84f26d77f0db9c7454dcb32d0174d85f7e4e4820fee85204ebc38": {
 "kind": "attest"
@@ -3643,6 +3683,19 @@
 "arch": "arm64",
 "created": "2026-06-27T14:49:56",
 "kind": "manifest"
+},
+"f4ab730f97ac6af97aa17450c567f8cf178e2f549be3b32270efc159dbd0654a": {
+"children": [
+{
+"arch": "arm64",
+"digest": "sha256:97861529ec686a95ca96079611ce12fbe63fa47b3ade760837b1dcbdf11f1a3f"
+},
+{
+"arch": "attest",
+"digest": "sha256:1905e91bc9dbba3a09a0ad6bc29225bfde40e75509a0a13735ea67391f28c2e1"
+}
+],
+"kind": "pidx"
 },
 "f6be155b1f1ad54248d2272a820a0d623fc6173d68c56f46a439c965f28ddf1a": {
 "kind": "attest"
