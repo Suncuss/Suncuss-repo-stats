@@ -52,6 +52,9 @@
 "03610519316ad5e5f25cbd6764b687c7e0d3e5ae0978a7e769092dde6c6bb5c2": {
 "kind": "attest"
 },
+"037702399f6047870fac80010ff0547c3abd51bdd64df3ad2f2f56d63396abf8": {
+"kind": "attest"
+},
 "038fac0e1f7219a5765feb0916831dba816a96f514296edfbecb67148b6d7b06": {
 "children": [
 {
@@ -2274,6 +2277,19 @@
 "98109086ef1091d551b2668eb49136a4241b4557154125f46625a31faed59406": {
 "kind": "attest"
 },
+"98b99d0ea6310b7bb412c62c93a10ec8074d566ad61de9f0e44764b452c99585": {
+"children": [
+{
+"arch": "arm64",
+"digest": "sha256:97861529ec686a95ca96079611ce12fbe63fa47b3ade760837b1dcbdf11f1a3f"
+},
+{
+"arch": "attest",
+"digest": "sha256:e01cf74ebfa1c1e66b9f86bd9791e24bbd41ab2c230b87d5ed193d721bac86e9"
+}
+],
+"kind": "pidx"
+},
 "995e0d9fc4b629d2d9dd2f940afb0523acd811584d87531c2f5919a03aad85be": {
 "children": [
 {
@@ -2515,6 +2531,27 @@
 }
 ],
 "kind": "pidx"
+},
+"a7f5221ffc5cfaa9553db7db597c33fdbd794e8d2cc5b32245d59cd5d187948d": {
+"children": [
+{
+"arch": "arm64",
+"digest": "sha256:97861529ec686a95ca96079611ce12fbe63fa47b3ade760837b1dcbdf11f1a3f"
+},
+{
+"arch": "attest",
+"digest": "sha256:e01cf74ebfa1c1e66b9f86bd9791e24bbd41ab2c230b87d5ed193d721bac86e9"
+},
+{
+"arch": "amd64",
+"digest": "sha256:aaaef74a67f661f091e575eff3fc6eb71e1dac30ab41d9a3cf8b7b863db28f62"
+},
+{
+"arch": "attest",
+"digest": "sha256:037702399f6047870fac80010ff0547c3abd51bdd64df3ad2f2f56d63396abf8"
+}
+],
+"kind": "index"
 },
 "a8a79c424e21cb0f31c7f752910d8135ff4a8b65afdb14949b343f3ebb1e3856": {
 "arch": "arm64",
@@ -3443,6 +3480,19 @@
 ],
 "kind": "pidx"
 },
+"d9fcb0897fc28e2f552bfe2303c0cf07b59f6b725bc70b07e436836f09fbe285": {
+"children": [
+{
+"arch": "amd64",
+"digest": "sha256:aaaef74a67f661f091e575eff3fc6eb71e1dac30ab41d9a3cf8b7b863db28f62"
+},
+{
+"arch": "attest",
+"digest": "sha256:037702399f6047870fac80010ff0547c3abd51bdd64df3ad2f2f56d63396abf8"
+}
+],
+"kind": "pidx"
+},
 "da9ca18c2d4bad55a0143690de532e309b9b6d5682833f5f92e79a4537e785d8": {
 "kind": "attest"
 },
@@ -3482,6 +3532,9 @@
 }
 ],
 "kind": "index"
+},
+"e01cf74ebfa1c1e66b9f86bd9791e24bbd41ab2c230b87d5ed193d721bac86e9": {
+"kind": "attest"
 },
 "e0f1c0a6ce9c4b1e5698960e168691e2ec2fa45f49f5fdc651d1e38685f383ad": {
 "kind": "attest"
