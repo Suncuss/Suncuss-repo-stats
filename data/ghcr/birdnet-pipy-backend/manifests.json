@@ -101,6 +101,11 @@
 ],
 "kind": "pidx"
 },
+"05125b9c0ca449b6d051e4ec1672006799f95a1a69b7cd026093345f6c557356": {
+"arch": "amd64",
+"created": "2026-09-30T01:48:25",
+"kind": "manifest"
+},
 "0512c70e7b81d4f69fdc2f23bf13ef84975c6d227856081d92706d5609d0f95f": {
 "kind": "attest"
 },
@@ -640,6 +645,9 @@
 "kind": "pidx"
 },
 "245724d1ad0a0bb9cb0af078839bdf49d8cd1f75c939077e8ea9e4550ed1b5f1": {
+"kind": "attest"
+},
+"245894c6e0eac2883edeaf1dcb99b40ca97df9fa10e76d6db5f4eba5dbc6f5a9": {
 "kind": "attest"
 },
 "2460cff168c2a8160196e0265688e8a53269c49734088d3bb4735aa5df94bb91": {
@@ -1936,6 +1944,19 @@
 ],
 "kind": "pidx"
 },
+"69b7d6233d505ad18d7a6c68f8f86c61b72e9c0824c8e7dc869a332e9f567f77": {
+"children": [
+{
+"arch": "amd64",
+"digest": "sha256:05125b9c0ca449b6d051e4ec1672006799f95a1a69b7cd026093345f6c557356"
+},
+{
+"arch": "attest",
+"digest": "sha256:245894c6e0eac2883edeaf1dcb99b40ca97df9fa10e76d6db5f4eba5dbc6f5a9"
+}
+],
+"kind": "pidx"
+},
 "6a0378f6640d59d430825f5c7bcbf9a8be6e8421ff1cf60ecca28bf5dccfce98": {
 "kind": "attest"
 },
@@ -2258,6 +2279,9 @@
 "7d39c74b5f42b18bdc419b402bacf1cc8dea15d820e974382803205410ce039c": {
 "kind": "attest"
 },
+"7d7089750f9c4c1ef220ea50ec81a1bb34e673a3fed633306dde5ab041bf8359": {
+"kind": "attest"
+},
 "7db8b4d2d2f8a710475b23b331feaa557c56ea7c0d1840c3592642d217f325f1": {
 "arch": "arm64",
 "created": "2026-09-20T23:46:10",
@@ -2498,6 +2522,19 @@
 "arch": "arm64",
 "created": "2026-08-17T02:38:22",
 "kind": "manifest"
+},
+"902f95fd981fff632b6afedad909f07b8fd8968c6dc26f385bdcdc744e182e82": {
+"children": [
+{
+"arch": "arm64",
+"digest": "sha256:afc44856e069124e0a34a3ae147d6b5d4d990a5d42add1763295b6b91bc7dc3f"
+},
+{
+"arch": "attest",
+"digest": "sha256:7d7089750f9c4c1ef220ea50ec81a1bb34e673a3fed633306dde5ab041bf8359"
+}
+],
+"kind": "pidx"
 },
 "90ab0d0232c10456fec659f79122a1a87c50dc4f3c51941b179b879f04271174": {
 "kind": "attest"
@@ -3013,6 +3050,11 @@
 "created": "2026-08-21T04:22:20",
 "kind": "manifest"
 },
+"afc44856e069124e0a34a3ae147d6b5d4d990a5d42add1763295b6b91bc7dc3f": {
+"arch": "arm64",
+"created": "2026-09-30T01:48:25",
+"kind": "manifest"
+},
 "afda54bdfcc511d7fb9131858262d75f7ef48212379552d71effae1e675efbf9": {
 "arch": "arm64",
 "created": "2026-07-25T22:27:39",
@@ -3022,6 +3064,27 @@
 "arch": "arm64",
 "created": "2026-08-17T02:38:47",
 "kind": "manifest"
+},
+"b093380e491097b3d8a27f610116adc9bdf8982bd7430a4b5672a280dccb22c7": {
+"children": [
+{
+"arch": "amd64",
+"digest": "sha256:05125b9c0ca449b6d051e4ec1672006799f95a1a69b7cd026093345f6c557356"
+},
+{
+"arch": "attest",
+"digest": "sha256:245894c6e0eac2883edeaf1dcb99b40ca97df9fa10e76d6db5f4eba5dbc6f5a9"
+},
+{
+"arch": "arm64",
+"digest": "sha256:afc44856e069124e0a34a3ae147d6b5d4d990a5d42add1763295b6b91bc7dc3f"
+},
+{
+"arch": "attest",
+"digest": "sha256:7d7089750f9c4c1ef220ea50ec81a1bb34e673a3fed633306dde5ab041bf8359"
+}
+],
+"kind": "index"
 },
 "b128add9be1a3d6fcbd2fd213c6b8d09bb0ecfd5d886807c9bc3cc9a0f31de65": {
 "children": [

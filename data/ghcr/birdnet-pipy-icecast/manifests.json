@@ -168,6 +168,27 @@
 ],
 "kind": "pidx"
 },
+"0a05d4d5de3a58a9a93d8224dd401f5a61adb487e8ab39d45142dd32b329a310": {
+"children": [
+{
+"arch": "arm64",
+"digest": "sha256:39caf20b9150463f0520272242cf1904b14b0e250ec519e7e8ec1befa05b8310"
+},
+{
+"arch": "attest",
+"digest": "sha256:ec394654607b8b32bf39efa3cbcd68f97089c24156c77ee89f13c7244777461f"
+},
+{
+"arch": "amd64",
+"digest": "sha256:2bb218e8343ff361d3f933b1e7c0ab415cbaa54d1174bdee13853b228a038b6a"
+},
+{
+"arch": "attest",
+"digest": "sha256:1009a5cf0f084dcf173e99063301a1a44e7a12ee07851e8eb5484f1f4cb9d938"
+}
+],
+"kind": "index"
+},
 "0a98fa9cac815417c8735f4d6dbf6fffcbbff22ea4fafba3f91e640cd43e9985": {
 "children": [
 {
@@ -286,6 +307,9 @@
 "kind": "attest"
 },
 "0f8131b71fda792c5642d9515fc3d3bcc3f7da4995520789f978480e67ad71ce": {
+"kind": "attest"
+},
+"1009a5cf0f084dcf173e99063301a1a44e7a12ee07851e8eb5484f1f4cb9d938": {
 "kind": "attest"
 },
 "10b1c9412bfec15b145e8e5eebe74f91ec8ec9130f601619b20a528e9ccd646f": {
@@ -732,6 +756,11 @@
 "2b6c947d727bace1d87635b68b4f669fb4b3435ab16e5017f1eb872fc8b206f8": {
 "kind": "attest"
 },
+"2bb218e8343ff361d3f933b1e7c0ab415cbaa54d1174bdee13853b228a038b6a": {
+"arch": "amd64",
+"created": "2026-09-30T01:48:25",
+"kind": "manifest"
+},
 "2bdee364499d47fd95cf56d4ffbd04ef6fae0fbdcf201d82fe43931aac132541": {
 "children": [
 {
@@ -970,6 +999,11 @@
 }
 ],
 "kind": "index"
+},
+"39caf20b9150463f0520272242cf1904b14b0e250ec519e7e8ec1befa05b8310": {
+"arch": "arm64",
+"created": "2026-09-30T01:48:23",
+"kind": "manifest"
 },
 "3a3ecd754d96b85309371c2650bc181cef8b653a959d79a498e135bceb990639": {
 "children": [
@@ -2717,6 +2751,19 @@
 ],
 "kind": "index"
 },
+"b0c0a37c8e81f79f6ea2808e09617962ed5e2c334830bdf5f896e02c6ceeabde": {
+"children": [
+{
+"arch": "arm64",
+"digest": "sha256:39caf20b9150463f0520272242cf1904b14b0e250ec519e7e8ec1befa05b8310"
+},
+{
+"arch": "attest",
+"digest": "sha256:ec394654607b8b32bf39efa3cbcd68f97089c24156c77ee89f13c7244777461f"
+}
+],
+"kind": "pidx"
+},
 "b19d2db98e5c1adca4aa4e85f87cdee6a044b341986ae61187907407e79da3b8": {
 "kind": "attest"
 },
@@ -3339,6 +3386,19 @@
 "d36ee1d0fe1902895d513706ca814da9fb48848f8f92d06bf92a9ea6e194e3ef": {
 "kind": "attest"
 },
+"d37c80f079cf8b90ff06f50b9a20ea87f5e101c18558bb99d6b024400087648b": {
+"children": [
+{
+"arch": "amd64",
+"digest": "sha256:2bb218e8343ff361d3f933b1e7c0ab415cbaa54d1174bdee13853b228a038b6a"
+},
+{
+"arch": "attest",
+"digest": "sha256:1009a5cf0f084dcf173e99063301a1a44e7a12ee07851e8eb5484f1f4cb9d938"
+}
+],
+"kind": "pidx"
+},
 "d40a8b673404e8e371fe5e08c14f96b2c64e6c288a9a473541e7e485229b2a52": {
 "children": [
 {
@@ -3673,6 +3733,9 @@
 "kind": "attest"
 },
 "ebf653616021172e8a354974fe65bb5949349425161dc52751210717f5d7573a": {
+"kind": "attest"
+},
+"ec394654607b8b32bf39efa3cbcd68f97089c24156c77ee89f13c7244777461f": {
 "kind": "attest"
 },
 "ec5e851464a1a53887cb235f8d3fa2bba3b7fa799a211094bb4362bb035479ea": {
