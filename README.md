@@ -14,7 +14,7 @@ The app has no telemetry, so everything here is inferred from public signals.
 
 ## Sources
 
-- **GHCR pulls (ours)** — GitHub has no API for container download counts; the collector scrapes each image's package *versions* page and classifies every digest through the registry (`collector/ghcr.py`). Platform-manifest pulls of the frontend image ≈ one per station update.
+- **GHCR pulls (ours)** — GitHub has no API for container download counts; the collector scrapes each image's package *versions* page and classifies every digest through the registry (`collector/ghcr.py`). Platform-manifest pulls of the frontend image ≈ one per station update; `docker compose pull` traffic (manual or scripted) is recognised by the backend being pulled 3× per frontend pull and filtered out.
 - **Home Assistant analytics** — `analytics.home-assistant.io/addons.json`, slug `db21ed7f_birdnet-pipy` (opt-in installs, per version).
 - **Alex's add-on images** — per-version pulls of `ghcr.io/alexbelgium/birdnet-pipy-{amd64,aarch64}` (≈ one per HA install per add-on version) plus his weekly `Stats` series.
 - **GitHub** — stars, tags, issues, discussions, build runs, and the traffic CSV from `traffic-data`.

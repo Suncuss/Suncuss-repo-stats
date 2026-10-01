@@ -45,12 +45,15 @@ def fetch_stars(owner, repo):
 
 
 def fetch_tags(owner, repo, cache):
-    """cache: dict name -> {date, sha}; only unknown tags cost a commit lookup."""
+    """cache: dict name -> {date, time, sha}; only unknown tags (or entries cached
+    before `time` was recorded) cost a commit lookup. `time` is the UTC commit
+    time, precise enough to order two releases tagged on the same day."""
     for t in paginate(f"repos/{owner}/{repo}/tags"):
-        if t["name"] not in cache:
+        if "time" not in cache.get(t["name"], {}):
             commit = api(f"repos/{owner}/{repo}/commits/{t['commit']['sha']}")
-            cache[t["name"]] = {"date": commit["commit"]["committer"]["date"][:10], "sha": t["commit"]["sha"][:10]}
-    return sorted(({"name": k, **v} for k, v in cache.items()), key=lambda x: (x["date"], x["name"]))
+            when = commit["commit"]["committer"]["date"]  # e.g. 2026-09-20T23:45:14Z
+            cache[t["name"]] = {"date": when[:10], "time": when[:19], "sha": t["commit"]["sha"][:10]}
+    return sorted(({"name": k, **v} for k, v in cache.items()), key=lambda x: (x.get("time") or x["date"], x["name"]))
 
 
 def fetch_issues(owner, repo):
