@@ -280,6 +280,9 @@ def cohort_model(builds, own_stations=OWN_STATIONS, today=None, active_days=ACTI
     stations. A build's stations last updated while it was current, so cohorts
     on builds replaced more than `active_days` ago count as 'not updating'.
 
+    on_build is unrounded: frequent builds each keep a fraction of a station
+    after draining, so round only after summing.
+
     The pool total is the largest single wave of pulls, so `active` is a floor:
     stations that skipped that build are only counted if they show up in a
     bigger wave. `pulled` sums the pulls of every build current within the
@@ -300,11 +303,11 @@ def cohort_model(builds, own_stations=OWN_STATIONS, today=None, active_days=ACTI
     on_build, dormant = {}, 0.0
     for k, v in pool.items():
         if ended[k] >= cutoff:
-            if round(v) > 0:
-                on_build[k] = round(v)
+            if v > 1e-9:
+                on_build[k] = v
         else:
             dormant += v
-    active = sum(on_build.values())
+    active = round(sum(on_build.values()))
     return {"on_build": on_build, "active": active, "not_updating": round(dormant), "pulled": max(active, round(pulled))}
 
 
@@ -326,6 +329,7 @@ def self_hosted_model(batches, pulls, today, own_stations=OWN_STATIONS, min_shar
     on_release = Counter()
     for k, n in main["on_build"].items():
         on_release[release[k]] += n
+    on_release = Counter({r: round(n) for r, n in on_release.items() if round(n) > 0})
     if staging["active"]:
         on_release["staging"] += staging["active"]
     active = main["active"] + staging["active"]

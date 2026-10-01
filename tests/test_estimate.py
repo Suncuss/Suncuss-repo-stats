@@ -74,6 +74,14 @@ def test_cohort_counts_untagged_rebuilds_as_their_own_wave():
     assert estimate.cohort_model(builds, own_stations=0, today="2026-09-20")["active"] == 20
 
 
+def test_cohort_model_rounds_after_summing():
+    # 10 stations, then five builds each taken by 6 of them: the older builds
+    # keep 0.1, 0.15, 0.38, 0.96 and 2.4 stations. Rounded one by one that is 9.
+    builds = [{"key": i, "created": f"2026-09-{i + 10:02d}T00:00:00", "pulls": 6 if i else 10} for i in range(6)]
+    m = estimate.cohort_model(builds, own_stations=0, today="2026-09-30")
+    assert m["active"] == 10 and round(sum(m["on_build"].values())) == 10
+
+
 def test_self_hosted_model_sums_channels_and_maps_releases():
     batches = [{"id": "m1", "created": "2026-09-05T19:10:44", "channel": "main", "release": "v0.8.8"},
                {"id": "m2", "created": "2026-09-20T23:46:07", "channel": "main", "release": "v0.8.10"},
