@@ -1,12 +1,16 @@
 /* BirdNET-PiPy adoption dashboard — renders data/dashboard.json with Chart.js in the app's visual vocabulary. */
 (async function () {
   // Tailwind values as used by the app; series colours = app accents (green-600, blue-600, amber-600), validated for colour vision.
-  const C = { g50: '#f9fafb', g100: '#f3f4f6', g200: '#e5e7eb', g400: '#9ca3af', g500: '#6b7280', g600: '#4b5563', g900: '#111827',
+  const C = { g50: '#f9fafb', g100: '#f3f4f6', g200: '#e5e7eb', g300: '#d1d5db', g400: '#9ca3af', g500: '#6b7280', g600: '#4b5563', g900: '#111827',
     s1: '#16a34a', s2: '#2563eb', s3: '#d97706' };
   const RAMP = ['#bbf7d0', '#86efac', '#4ade80', '#22c55e', '#16a34a', '#15803d', '#166534', '#14532d']; // green-200…900, ordinal by release age
   const fmt = (n) => (n == null ? '–' : Number(n).toLocaleString('en-US'));
   const vkey = (v) => String(v).split(/[.\-]/).map((x) => (/^\d+$/.test(x) ? +x : -1));
   const vcmp = (a, b) => { const x = vkey(a), y = vkey(b); for (let i = 0; i < Math.max(x.length, y.length); i++) { const d = (x[i] ?? 0) - (y[i] ?? 0); if (d) return d; } return 0; };
+  const relcmp = (a, b) => (a === 'staging') - (b === 'staging') || vcmp(a, b); // releases by version, the staging channel last
+  const relLabel = (r) => (r === 'staging' ? 'staging (Latest)' : r);
+  // Green ramp for releases, grey for the staging channel.
+  const relColors = (labels) => { const ramp = rampColors(labels.filter((l) => l !== 'staging').length); return labels.map((l, i) => (l === 'staging' ? C.g400 : ramp[i])); };
   const el = (id) => document.getElementById(id);
   const charts = {};
 
@@ -27,14 +31,23 @@
   if (errs.length) { el('errors').hidden = false; el('errors').textContent = 'The last run had failures, so some sections are stale: ' + errs.map(([k, v]) => `${k} (${v})`).join('; '); }
   el('m-own').textContent = data.config.own_stations;
   el('m-window').textContent = data.config.active_window_days;
+  el('m-share').textContent = Math.round((data.config.min_update_share ?? 0.5) * 100) + '%';
+  el('m-dedup').textContent = data.config.dedup_since;
+  el('m-services').textContent = data.config.backend_services;
+  el('m-services1').textContent = data.config.backend_services - 1;
+  if (ghcr.automated?.pulls) {
+    const a = ghcr.automated, pct = Math.round(a.share * 100);
+    el('m-auto').textContent = ` (${fmt(a.pulls)} frontend pulls since ${a.since}, ${pct}% of all)`;
+    el('auto-note').textContent = `Since ${a.since}, ${fmt(a.pulls)} frontend pulls (${pct}%) were automated.`;
+  }
   el('footer').innerHTML = `Generated ${data.generated.replace('T', ' ').slice(0, 16)} UTC · <a href="data/dashboard.json">dashboard.json</a>`;
 
   // ---- headline tiles ---------------------------------------------------------
   const latestRel = ghcr.releases[ghcr.releases.length - 1];
   const tiles = [
     ['Estimated active installs', fmt(est.total.mid), `range ${fmt(est.total.low)}–${fmt(est.total.high)}`],
-    ['Self-hosted stations', fmt(est.self_hosted.active), `estimate · ${fmt(est.self_hosted.not_updating)} not updating`],
-    ['Home Assistant installs', fmt(est.ha.estimated), `${fmt(est.ha.reporting)} reporting · opt-in ${est.ha.opt_in_rate != null ? Math.round(est.ha.opt_in_rate * 100) + '%' : '–'}`],
+    ['Self-hosted stations', fmt(est.self_hosted.active), `range ${fmt(est.self_hosted.active)}–${fmt(est.self_hosted.high)} · ${fmt(est.self_hosted.channels?.staging)} on Latest · ${fmt(est.self_hosted.not_updating)} not updating`],
+    ['Home Assistant installs', fmt(est.ha.estimated), `range ${fmt(est.ha.low)}–${fmt(est.ha.high)} · ${fmt(est.ha.reporting)} reporting · opt-in ${est.ha.opt_in_rate != null ? Math.round(est.ha.opt_in_rate * 100) + '%' : '–'}`],
     ['Latest release', latestRel ? latestRel.release : '–', latestRel ? `${fmt(latestRel.pulls)} station pulls in ${latestRel.days_live} days` : ''],
     ['GitHub', `${fmt(gh.repo.stars)} stars`, `${fmt(gh.repo.forks)} forks · ${fmt(gh.issues.unique_authors)} issue authors${gh.discussions ? ` · ${fmt(gh.discussions.unique_authors)} discussion authors` : ''}`],
   ];
@@ -92,15 +105,15 @@
   const sinceDays = (rows, days, key = 'date') => (days == null ? rows : rows.filter((r) => (Date.now() - new Date(r[key] + 'T00:00:00Z')) / 864e5 <= days));
 
   // ---- version distribution ---------------------------------------------------
-  const selfDist = Object.entries(est.self_hosted.on_release).sort((a, b) => vcmp(a[0], b[0]));
-  { const cfg = single(base('bar')); cfg.data = { labels: selfDist.map((x) => x[0]), datasets: [{ label: 'stations', data: selfDist.map((x) => x[1]), ...bar(rampColors(selfDist.length)) }] }; make('c-self-dist', cfg); }
+  const selfDist = Object.entries(est.self_hosted.on_release).sort((a, b) => relcmp(a[0], b[0]));
+  { const cfg = single(base('bar')); cfg.data = { labels: selfDist.map((x) => relLabel(x[0])), datasets: [{ label: 'stations', data: selfDist.map((x) => x[1]), ...bar(relColors(selfDist.map((x) => x[0]))) }] }; make('c-self-dist', cfg); }
   const haDist = Object.entries(est.ha.versions || {}).sort((a, b) => vcmp(a[0], b[0]));
   { const cfg = single(base('bar')); cfg.options.scales.x.ticks = { color: C.g500, autoSkip: false, maxRotation: 45, minRotation: 45 }; cfg.data = { labels: haDist.map((x) => x[0]), datasets: [{ label: 'installs', data: haDist.map((x) => x[1]), ...bar(rampColors(haDist.length)) }] }; make('c-ha-dist', cfg); }
   {
-    const all = [...new Set([...selfDist.map((x) => x[0]), ...haDist.map((x) => 'v' + x[0])])].sort(vcmp);
+    const all = [...new Set([...selfDist.map((x) => x[0]), ...haDist.map((x) => 'v' + x[0])])].sort(relcmp);
     const haMap = Object.fromEntries(haDist.map(([v, n]) => ['v' + v, n]));
     const selfMap = Object.fromEntries(selfDist);
-    table('t-dist', ['release', 'self-hosted (est.)', 'HA reporting'], all.map((v) => [v, selfMap[v] ?? 0, haMap[v] ?? 0]));
+    table('t-dist', ['release', 'self-hosted (est.)', 'HA reporting'], all.map((v) => [relLabel(v), selfMap[v] ?? 0, haMap[v] ?? 0]));
   }
   tabs('range-hist', [['7-Day', 7], ['30-Day', 30], ['90-Day', 90], ['All', null]], null, (days) => {
     const h = sinceDays(est.history, days);
@@ -111,10 +124,10 @@
       { label: 'Home Assistant', data: h.map((x) => x.ha), ...line(C.s3), pointRadius: dots(h.length) },
     ] };
     make('c-est-hist', cfg);
-    const rels = [...new Set(h.flatMap((x) => Object.keys(x.on_release)))].sort(vcmp);
-    const colors = rampColors(rels.length);
+    const rels = [...new Set(h.flatMap((x) => Object.keys(x.on_release)))].sort(relcmp);
+    const colors = relColors(rels);
     const mix = base('line', { stacked: true }); mix.options.scales.x.stacked = false;
-    mix.data = { labels: h.map((x) => x.date), datasets: rels.map((r, i) => ({ label: r, data: h.map((x) => x.on_release[r] || 0), ...line(colors[i], true), pointRadius: dots(h.length) })) };
+    mix.data = { labels: h.map((x) => x.date), datasets: rels.map((r, i) => ({ label: relLabel(r), data: h.map((x) => x.on_release[r] || 0), ...line(colors[i], true), pointRadius: dots(h.length) })) };
     make('c-self-hist', mix);
     el('hist-caption').textContent = `One point per daily snapshot since ${est.history[0]?.date || '–'}${days ? `; showing the last ${days} days` : ''}.`;
   });
@@ -130,12 +143,13 @@
       cfg.data = { labels, datasets: [
         { label: 'arm64', data: rels.map((r) => r.arch.arm64 || 0), ...bar(C.s1) },
         { label: 'amd64', data: rels.map((r) => r.arch.amd64 || 0), ...bar(C.s2) },
+        { label: 'automated (filtered)', data: rels.map((r) => r.automated || 0), ...bar(C.g300) },
       ] };
       el('releases-title').textContent = 'Station pulls per release · frontend platform manifests';
     } else {
       single(cfg);
       cfg.data = { labels, datasets: [{ label: 'platform pulls', data: rels.map((r) => r.other_images[image] ?? 0), ...bar(C.s1) }] };
-      el('releases-title').textContent = `Platform pulls per release · ${short(image)} (${image === 'birdnet-pipy-backend' ? 'pulled ~2.5× per station' : 'rarely rebuilt, so one digest spans releases'})`;
+      el('releases-title').textContent = `Platform pulls per release · ${short(image)} (${image === 'birdnet-pipy-backend' ? 'raw: compose pulls count it once per service' : 'rarely rebuilt, so one digest spans releases'})`;
     }
     make('c-releases', cfg);
   }
@@ -146,16 +160,20 @@
     seg.addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; active = b.dataset.image; render(); renderReleases(active); });
     render(); renderReleases(active);
   }
-  const relRow = (r) => [r.release, r.created.slice(0, 10), r.days_live, r.pulls, r.arch.arm64 || 0, r.arch.amd64 || 0, r.index, r.mixed ? 'yes' : '', r.other_images['birdnet-pipy-backend'] ?? 0, r.other_images['birdnet-pipy-icecast'] ?? 0];
-  const relHead = ['release', 'built', 'days current', 'station pulls', 'arm64', 'amd64', 'index GETs', 'mixed', 'backend pulls', 'icecast pulls'];
+  const relRow = (r) => [r.release, r.created.slice(0, 10), r.days_live, r.pulls, r.arch.arm64 || 0, r.arch.amd64 || 0, r.automated || 0, r.batches, r.index, r.mixed ? 'yes' : '', r.other_images['birdnet-pipy-backend'] ?? 0, r.other_images['birdnet-pipy-icecast'] ?? 0];
+  const relHead = ['release', 'built', 'days current', 'station pulls', 'arm64', 'amd64', 'automated', 'builds', 'index GETs', 'mixed', 'backend pulls', 'icecast pulls'];
   table('t-releases', relHead, [...ghcr.releases].reverse().slice(0, 8).map(relRow), 2);
   table('t-releases-all', relHead, [...ghcr.releases].reverse().map(relRow), 2);
   {
     const days = ghcr.daily;
-    const labels = [...new Set(days.flatMap((d) => Object.keys(d.pulls)))].sort((a, b) => (a === 'staging') - (b === 'staging') || vcmp(a, b));
-    const colors = rampColors(labels.filter((l) => l !== 'staging').length);
+    const labels = [...new Set(days.flatMap((d) => Object.keys(d.pulls)))].sort(relcmp);
+    const colors = relColors(labels);
+    const sum = (o) => Object.values(o || {}).reduce((a, b) => a + b, 0);
     const cfg = base('bar', { stacked: true });
-    cfg.data = { labels: days.map((d) => d.date), datasets: labels.map((l, i) => ({ label: l, data: days.map((d) => Object.values(d.pulls[l] || {}).reduce((a, b) => a + b, 0)), ...bar(l === 'staging' ? C.g400 : colors[i]) })) };
+    cfg.data = { labels: days.map((d) => d.date), datasets: [
+      ...labels.map((l, i) => ({ label: relLabel(l), data: days.map((d) => sum(d.pulls[l])), ...bar(colors[i]) })),
+      { label: 'automated (filtered)', data: days.map((d) => sum(d.automated)), ...bar(C.g300) },
+    ] };
     make('c-daily', cfg);
   }
   table('t-lifetime', ['image', 'downloads'], Object.entries(ghcr.lifetime).map(([k, v]) => [short(k), v]));
