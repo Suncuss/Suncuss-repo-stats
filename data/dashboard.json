@@ -20,8 +20,8 @@
 "reporting": 25,
 "versions": {
 "0.7.5": 1,
-"0.8.10": 8,
-"0.8.11": 12,
+"0.8.10": 4,
+"0.8.11": 16,
 "0.8.4": 1,
 "0.8.8": 3
 }
@@ -512,6 +512,20 @@
 },
 "self_hosted": 44,
 "total": 203
+},
+{
+"date": "2026-10-06",
+"ha": 159,
+"not_updating": 0,
+"on_release": {
+"staging": 21,
+"v0.8.10": 5,
+"v0.8.11": 14,
+"v0.8.8": 3,
+"v0.8.9": 1
+},
+"self_hosted": 44,
+"total": 203
 }
 ],
 "self_hosted": {
@@ -527,9 +541,9 @@
 "not_updating": 0,
 "on_release": {
 "staging": 21,
-"v0.8.10": 6,
-"v0.8.11": 12,
-"v0.8.8": 4,
+"v0.8.10": 5,
+"v0.8.11": 14,
+"v0.8.8": 3,
 "v0.8.9": 1
 },
 "own_stations_excluded": 1
@@ -540,14 +554,14 @@
 "mid": 203
 }
 },
-"generated": "2026-10-05T02:20:11+00:00",
+"generated": "2026-10-06T03:17:26+00:00",
 "ghcr": {
 "automated": {
 "arch": {
-"amd64": 425,
-"arm64": 1854
+"amd64": 432,
+"arm64": 1868
 },
-"pulls": 2278,
+"pulls": 2299,
 "share": 0.69,
 "since": "2026-04-09"
 },
@@ -1136,12 +1150,25 @@
 }
 },
 "since": "2026-10-04"
+},
+{
+"automated": {
+"amd64": 7,
+"arm64": 14
+},
+"date": "2026-10-06",
+"pulls": {
+"v0.8.11": {
+"arm64": 2
+}
+},
+"since": "2026-10-05"
 }
 ],
 "lifetime": {
-"birdnet-pipy-backend": 22138,
-"birdnet-pipy-frontend": 11216,
-"birdnet-pipy-icecast": 10858
+"birdnet-pipy-backend": 22316,
+"birdnet-pipy-frontend": 11296,
+"birdnet-pipy-icecast": 10938
 },
 "releases": [
 {
@@ -1657,20 +1684,20 @@
 {
 "arch": {
 "amd64": 3,
-"arm64": 10
+"arm64": 12
 },
-"automated": 76,
+"automated": 97,
 "batches": 1,
 "created": "2026-10-01T01:59:52",
 "current": true,
-"days_live": 4.9,
-"index": 161,
+"days_live": 5.9,
+"index": 202,
 "mixed": false,
 "other_images": {
-"birdnet-pipy-backend": 238,
-"birdnet-pipy-icecast": 88
+"birdnet-pipy-backend": 303,
+"birdnet-pipy-icecast": 111
 },
-"pulls": 13,
+"pulls": 15,
 "release": "v0.8.11"
 }
 ],
@@ -1715,7 +1742,8 @@
 "2026-10-02",
 "2026-10-03",
 "2026-10-04",
-"2026-10-05"
+"2026-10-05",
+"2026-10-06"
 ],
 "staging": [
 {
@@ -2208,10 +2236,10 @@
 },
 "main": {
 "arch": {
-"amd64": 75,
-"arm64": 163
+"amd64": 96,
+"arm64": 207
 },
-"index": 258
+"index": 327
 },
 "staging": {
 "arch": {
@@ -2230,10 +2258,10 @@
 },
 "main": {
 "arch": {
-"amd64": 27,
-"arm64": 62
+"amd64": 34,
+"arm64": 78
 },
-"index": 157
+"index": 198
 },
 "staging": {
 "arch": {
@@ -2252,10 +2280,10 @@
 },
 "main": {
 "arch": {
-"amd64": 27,
-"arm64": 61
+"amd64": 34,
+"arm64": 77
 },
-"index": 156
+"index": 197
 },
 "staging": {
 "arch": {
@@ -4320,6 +4348,13 @@
 "date": "2026-10-03",
 "views": 8,
 "views_unique": 4
+},
+{
+"clones": 7,
+"clones_unique": 5,
+"date": "2026-10-04",
+"views": 5,
+"views_unique": 3
 }
 ],
 "monthly": [
@@ -4387,11 +4422,11 @@
 "views_unique": 113
 },
 {
-"clones": 17,
-"clones_unique": 6,
+"clones": 24,
+"clones_unique": 11,
 "month": "2026-10",
-"views": 35,
-"views_unique": 13
+"views": 40,
+"views_unique": 16
 }
 ]
 }
@@ -4630,13 +4665,13 @@
 },
 "0.6.6-2": {
 "aarch64": 12,
-"age_days": 150,
+"age_days": 180,
 "amd64": 22,
 "total": 34
 },
 "0.6.6-3": {
 "aarch64": 29,
-"age_days": 150,
+"age_days": 180,
 "amd64": 51,
 "total": 80
 },
@@ -4690,15 +4725,15 @@
 },
 "0.8.10": {
 "aarch64": 27,
-"age_days": 11,
+"age_days": 12,
 "amd64": 92,
 "total": 119
 },
 "0.8.11": {
-"aarch64": 28,
-"age_days": 2,
-"amd64": 78,
-"total": 106
+"aarch64": 30,
+"age_days": 3,
+"amd64": 80,
+"total": 110
 },
 "0.8.2": {
 "aarch64": 19,
@@ -4744,7 +4779,7 @@
 },
 "0.8.8": {
 "aarch64": 41,
-"age_days": 30,
+"age_days": 60,
 "amd64": 118,
 "total": 159
 }
@@ -5363,25 +5398,37 @@
 "0.8.4": 1,
 "0.8.8": 3
 }
+},
+{
+"auto_update": 5,
+"date": "2026-10-06",
+"total": 25,
+"versions": {
+"0.7.5": 1,
+"0.8.10": 4,
+"0.8.11": 16,
+"0.8.4": 1,
+"0.8.8": 3
+}
 }
 ],
 "latest": {
 "auto_update": 5,
-"date": "2026-10-05",
+"date": "2026-10-06",
 "total": 25,
 "versions": {
 "0.7.5": 1,
-"0.8.10": 8,
-"0.8.11": 12,
+"0.8.10": 4,
+"0.8.11": 16,
 "0.8.4": 1,
 "0.8.8": 3
 }
 },
 "reference": {
 "db21ed7f_battybirdnet-pi": 14,
-"db21ed7f_birdnet-go": 224,
+"db21ed7f_birdnet-go": 227,
 "db21ed7f_birdnet-pi": 50
 }
 },
-"today": "2026-10-05"
+"today": "2026-10-06"
 }
