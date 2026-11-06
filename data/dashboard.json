@@ -17,11 +17,11 @@
 "method": "pulls of the most-pulled of the two newest add-on versions out at least 7 days (at least the HA analytics opt-in total)",
 "opt_in_rate": 0.16,
 "pulls_base": 256,
-"reporting": 42,
+"reporting": 41,
 "versions": {
 "0.7.5": 1,
-"0.8.11": 22,
-"0.8.12": 19
+"0.8.11": 12,
+"0.8.12": 28
 }
 },
 "history": [
@@ -881,6 +881,18 @@
 },
 "self_hosted": 52,
 "total": 308
+},
+{
+"date": "2026-11-06",
+"ha": 256,
+"not_updating": 0,
+"on_release": {
+"staging": 22,
+"v0.8.11": 21,
+"v0.8.12": 9
+},
+"self_hosted": 52,
+"total": 308
 }
 ],
 "self_hosted": {
@@ -896,8 +908,8 @@
 "not_updating": 0,
 "on_release": {
 "staging": 22,
-"v0.8.11": 22,
-"v0.8.12": 8
+"v0.8.11": 21,
+"v0.8.12": 9
 },
 "own_stations_excluded": 1
 },
@@ -907,14 +919,14 @@
 "mid": 308
 }
 },
-"generated": "2026-11-05T03:40:58+00:00",
+"generated": "2026-11-06T03:36:55+00:00",
 "ghcr": {
 "automated": {
 "arch": {
-"amd64": 634,
-"arm64": 2276
+"amd64": 640,
+"arm64": 2288
 },
-"pulls": 2909,
+"pulls": 2927,
 "share": 0.73,
 "since": "2026-04-09"
 },
@@ -1857,12 +1869,25 @@
 }
 },
 "since": "2026-11-04"
+},
+{
+"automated": {
+"amd64": 6,
+"arm64": 12
+},
+"date": "2026-11-06",
+"pulls": {
+"v0.8.12": {
+"arm64": 1
+}
+},
+"since": "2026-11-05"
 }
 ],
 "lifetime": {
-"birdnet-pipy-backend": 27358,
-"birdnet-pipy-frontend": 13485,
-"birdnet-pipy-icecast": 13125
+"birdnet-pipy-backend": 27511,
+"birdnet-pipy-frontend": 13554,
+"birdnet-pipy-icecast": 13194
 },
 "releases": [
 {
@@ -2397,20 +2422,20 @@
 {
 "arch": {
 "amd64": 4,
-"arm64": 6
+"arm64": 7
 },
-"automated": 20,
+"automated": 38,
 "batches": 1,
 "created": "2026-11-03T05:46:48",
 "current": true,
-"days_live": 2.8,
-"index": 53,
+"days_live": 3.8,
+"index": 90,
 "mixed": false,
 "other_images": {
-"birdnet-pipy-backend": 68,
-"birdnet-pipy-icecast": 30
+"birdnet-pipy-backend": 123,
+"birdnet-pipy-icecast": 49
 },
-"pulls": 10,
+"pulls": 11,
 "release": "v0.8.12"
 }
 ],
@@ -2486,7 +2511,8 @@
 "2026-11-02",
 "2026-11-03",
 "2026-11-04",
-"2026-11-05"
+"2026-11-05",
+"2026-11-06"
 ],
 "staging": [
 {
@@ -3008,10 +3034,10 @@
 },
 "main": {
 "arch": {
-"amd64": 22,
-"arm64": 46
+"amd64": 40,
+"arm64": 83
 },
-"index": 75
+"index": 136
 },
 "staging": {
 "arch": {
@@ -3030,10 +3056,10 @@
 },
 "main": {
 "arch": {
-"amd64": 10,
-"arm64": 20
+"amd64": 16,
+"arm64": 33
 },
-"index": 49
+"index": 86
 },
 "staging": {
 "arch": {
@@ -3052,10 +3078,10 @@
 },
 "main": {
 "arch": {
-"amd64": 10,
-"arm64": 20
+"amd64": 16,
+"arm64": 33
 },
-"index": 49
+"index": 86
 },
 "staging": {
 "arch": {
@@ -3083,15 +3109,15 @@
 "2026-08": 1,
 "2026-09": 3,
 "2026-10": 1,
-"2026-11": 1
+"2026-11": 2
 },
-"total": 54,
-"unique_authors": 20
+"total": 55,
+"unique_authors": 21
 },
 "repo": {
 "created": "2025-12-18",
 "forks": 6,
-"open_issues": 9,
+"open_issues": 10,
 "stars": 55,
 "watchers": 1
 },
@@ -5349,6 +5375,13 @@
 "date": "2026-11-03",
 "views": 10,
 "views_unique": 4
+},
+{
+"clones": 21,
+"clones_unique": 11,
+"date": "2026-11-04",
+"views": 23,
+"views_unique": 3
 }
 ],
 "monthly": [
@@ -5423,11 +5456,11 @@
 "views_unique": 92
 },
 {
-"clones": 41,
-"clones_unique": 16,
+"clones": 62,
+"clones_unique": 27,
 "month": "2026-11",
-"views": 56,
-"views_unique": 22
+"views": 79,
+"views_unique": 25
 }
 ]
 }
@@ -5720,7 +5753,7 @@
 },
 "0.7.5": {
 "aarch64": 31,
-"age_days": 120,
+"age_days": 150,
 "amd64": 99,
 "total": 130
 },
@@ -5738,9 +5771,9 @@
 },
 "0.8.12": {
 "aarch64": 37,
-"age_days": 2,
-"amd64": 127,
-"total": 164
+"age_days": 3,
+"amd64": 137,
+"total": 174
 },
 "0.8.2": {
 "aarch64": 19,
@@ -6735,16 +6768,26 @@
 "0.8.11": 22,
 "0.8.12": 19
 }
+},
+{
+"auto_update": 10,
+"date": "2026-11-06",
+"total": 41,
+"versions": {
+"0.7.5": 1,
+"0.8.11": 12,
+"0.8.12": 28
+}
 }
 ],
 "latest": {
 "auto_update": 10,
-"date": "2026-11-05",
-"total": 42,
+"date": "2026-11-06",
+"total": 41,
 "versions": {
 "0.7.5": 1,
-"0.8.11": 22,
-"0.8.12": 19
+"0.8.11": 12,
+"0.8.12": 28
 }
 },
 "reference": {
@@ -6753,5 +6796,5 @@
 "db21ed7f_birdnet-pi": 50
 }
 },
-"today": "2026-11-05"
+"today": "2026-11-06"
 }
