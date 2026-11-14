@@ -11,16 +11,16 @@
 "estimate": {
 "ha": {
 "auto_update": 13,
-"estimated": 256,
-"high": 256,
-"low": 210,
+"estimated": 258,
+"high": 258,
+"low": 218,
 "method": "pulls of the most-pulled of the two newest add-on versions out at least 7 days (at least the HA analytics opt-in total)",
 "opt_in_rate": 0.16,
-"pulls_base": 256,
+"pulls_base": 258,
 "reporting": 42,
 "versions": {
-"0.8.11": 9,
-"0.8.12": 33
+"0.8.11": 8,
+"0.8.12": 34
 }
 },
 "history": [
@@ -976,40 +976,52 @@
 },
 "self_hosted": 51,
 "total": 307
+},
+{
+"date": "2026-11-14",
+"ha": 258,
+"not_updating": 0,
+"on_release": {
+"staging": 22,
+"v0.8.11": 9,
+"v0.8.12": 22
+},
+"self_hosted": 53,
+"total": 311
 }
 ],
 "self_hosted": {
-"active": 51,
+"active": 53,
 "active_window_days": 90,
 "channels": {
-"main": 30,
-"staging": 21
+"main": 31,
+"staging": 22
 },
-"high": 102,
+"high": 106,
 "method": "cohort model per build and channel on station-image platform pulls, automated pulls removed",
 "min_update_share": 0.5,
 "not_updating": 0,
 "on_release": {
-"staging": 21,
-"v0.8.11": 11,
-"v0.8.12": 19
+"staging": 22,
+"v0.8.11": 9,
+"v0.8.12": 22
 },
 "own_stations_excluded": 1
 },
 "total": {
-"high": 358,
-"low": 261,
-"mid": 307
+"high": 364,
+"low": 271,
+"mid": 311
 }
 },
-"generated": "2026-11-13T03:33:19+00:00",
+"generated": "2026-11-14T03:30:15+00:00",
 "ghcr": {
 "automated": {
 "arch": {
-"amd64": 680,
-"arm64": 2368
+"amd64": 684,
+"arm64": 2376
 },
-"pulls": 3047,
+"pulls": 3059,
 "share": 0.74,
 "since": "2026-04-09"
 },
@@ -2051,12 +2063,29 @@
 }
 },
 "since": "2026-11-12"
+},
+{
+"automated": {
+"amd64": 4,
+"arm64": 8
+},
+"date": "2026-11-14",
+"pulls": {
+"staging": {
+"arm64": 2
+},
+"v0.8.12": {
+"amd64": 1,
+"arm64": 1
+}
+},
+"since": "2026-11-13"
 }
 ],
 "lifetime": {
-"birdnet-pipy-backend": 28563,
-"birdnet-pipy-frontend": 14047,
-"birdnet-pipy-icecast": 13686
+"birdnet-pipy-backend": 28683,
+"birdnet-pipy-frontend": 14111,
+"birdnet-pipy-icecast": 13751
 },
 "releases": [
 {
@@ -2590,21 +2619,21 @@
 },
 {
 "arch": {
-"amd64": 5,
-"arm64": 16
+"amd64": 6,
+"arm64": 17
 },
-"automated": 157,
+"automated": 169,
 "batches": 1,
 "created": "2026-11-03T05:46:48",
 "current": true,
-"days_live": 10.8,
-"index": 357,
+"days_live": 11.8,
+"index": 392,
 "mixed": false,
 "other_images": {
-"birdnet-pipy-backend": 492,
-"birdnet-pipy-icecast": 178
+"birdnet-pipy-backend": 530,
+"birdnet-pipy-icecast": 192
 },
-"pulls": 21,
+"pulls": 23,
 "release": "v0.8.12"
 }
 ],
@@ -2688,7 +2717,8 @@
 "2026-11-10",
 "2026-11-11",
 "2026-11-12",
-"2026-11-13"
+"2026-11-13",
+"2026-11-14"
 ],
 "staging": [
 {
@@ -3187,17 +3217,17 @@
 {
 "arch": {
 "amd64": 3,
-"arm64": 8
+"arm64": 9
 },
-"attest": 21,
-"automated": 17,
+"attest": 23,
+"automated": 18,
 "branches": [
 "main",
 "staging"
 ],
 "created": "2026-11-03T05:46:42",
-"index": 46,
-"pulls": 11
+"index": 48,
+"pulls": 12
 }
 ],
 "tags": {
@@ -3210,17 +3240,17 @@
 },
 "main": {
 "arch": {
-"amd64": 161,
-"arm64": 331
+"amd64": 174,
+"arm64": 356
 },
-"index": 562
+"index": 613
 },
 "staging": {
 "arch": {
 "amd64": 25,
-"arm64": 58
+"arm64": 60
 },
-"index": 64
+"index": 66
 }
 },
 "birdnet-pipy-frontend": {
@@ -3232,17 +3262,17 @@
 },
 "main": {
 "arch": {
-"amd64": 57,
-"arm64": 121
+"amd64": 62,
+"arm64": 130
 },
-"index": 353
+"index": 388
 },
 "staging": {
 "arch": {
 "amd64": 8,
-"arm64": 20
+"arm64": 22
 },
-"index": 42
+"index": 44
 }
 },
 "birdnet-pipy-icecast": {
@@ -3254,17 +3284,17 @@
 },
 "main": {
 "arch": {
-"amd64": 57,
-"arm64": 121
+"amd64": 62,
+"arm64": 130
 },
-"index": 352
+"index": 388
 },
 "staging": {
 "arch": {
 "amd64": 11,
-"arm64": 26
+"arm64": 28
 },
-"index": 43
+"index": 45
 }
 }
 }
@@ -3293,7 +3323,7 @@
 "repo": {
 "created": "2025-12-18",
 "forks": 6,
-"open_issues": 11,
+"open_issues": 12,
 "stars": 56,
 "watchers": 1
 },
@@ -5612,6 +5642,13 @@
 "date": "2026-11-11",
 "views": 15,
 "views_unique": 9
+},
+{
+"clones": 10,
+"clones_unique": 7,
+"date": "2026-11-12",
+"views": 10,
+"views_unique": 5
 }
 ],
 "monthly": [
@@ -5686,11 +5723,11 @@
 "views_unique": 92
 },
 {
-"clones": 95,
-"clones_unique": 49,
+"clones": 105,
+"clones_unique": 56,
 "month": "2026-11",
-"views": 134,
-"views_unique": 55
+"views": 144,
+"views_unique": 60
 }
 ]
 }
@@ -5699,21 +5736,21 @@
 "addon_version": "0.8.12",
 "alex_versions": {
 "0.1": {
-"aarch64": 33,
+"aarch64": 34,
 "age_days": 300,
-"amd64": 40,
-"total": 73
+"amd64": 41,
+"total": 75
 },
 "0.2": {
-"aarch64": 32,
+"aarch64": 33,
 "age_days": 300,
-"amd64": 33,
-"total": 65
+"amd64": 34,
+"total": 67
 },
 "0.3": {
 "age_days": 300,
-"amd64": 34,
-"total": 34
+"amd64": 35,
+"total": 35
 },
 "0.3.2": {
 "aarch64": 29,
@@ -5741,317 +5778,317 @@
 },
 "0.3.2-5": {
 "aarch64": 23,
-"age_days": 270,
+"age_days": 300,
 "amd64": 28,
 "total": 51
 },
 "0.3.2-6": {
 "aarch64": 26,
-"age_days": 270,
+"age_days": 300,
 "amd64": 31,
 "total": 57
 },
 "0.4": {
 "age_days": 300,
-"amd64": 28,
-"total": 28
+"amd64": 29,
+"total": 29
 },
 "0.4.0": {
-"aarch64": 27,
+"aarch64": 28,
 "age_days": 270,
 "amd64": 38,
-"total": 65
+"total": 66
 },
 "0.5": {
-"aarch64": 22,
-"age_days": 300,
-"amd64": 27,
-"total": 49
-},
-"0.5.0": {
-"aarch64": 25,
-"age_days": 270,
-"amd64": 29,
-"total": 54
-},
-"0.5.0-2": {
-"aarch64": 27,
-"age_days": 270,
-"amd64": 31,
-"total": 58
-},
-"0.5.0-4": {
-"aarch64": 28,
-"age_days": 270,
-"amd64": 30,
-"total": 58
-},
-"0.5.0-5": {
-"aarch64": 25,
-"age_days": 270,
-"amd64": 30,
-"total": 55
-},
-"0.5.0-6": {
-"aarch64": 33,
-"age_days": 270,
-"amd64": 45,
-"total": 78
-},
-"0.5.4": {
-"aarch64": 29,
-"age_days": 270,
-"amd64": 35,
-"total": 64
-},
-"0.5.4-2": {
-"aarch64": 20,
-"age_days": 270,
-"amd64": 27,
-"total": 47
-},
-"0.5.4-3": {
-"aarch64": 29,
-"age_days": 270,
-"amd64": 42,
-"total": 71
-},
-"0.5.5": {
-"aarch64": 20,
-"age_days": 240,
-"amd64": 26,
-"total": 46
-},
-"0.5.5-2": {
-"aarch64": 27,
-"age_days": 240,
-"amd64": 38,
-"total": 65
-},
-"0.5.6": {
-"age_days": 240,
-"amd64": 54,
-"total": 54
-},
-"0.5.6-2": {
-"aarch64": 27,
-"age_days": 240,
-"amd64": 29,
-"total": 56
-},
-"0.5.6-3": {
-"age_days": 240,
-"amd64": 40,
-"total": 40
-},
-"0.5.7": {
-"age_days": 240,
-"amd64": 77,
-"total": 77
-},
-"0.5.8": {
-"aarch64": 28,
-"age_days": 240,
-"amd64": 75,
-"total": 103
-},
-"0.6": {
 "aarch64": 23,
 "age_days": 300,
 "amd64": 27,
 "total": 50
 },
-"0.6.0": {
-"aarch64": 27,
-"age_days": 210,
-"amd64": 52,
-"total": 79
+"0.5.0": {
+"aarch64": 26,
+"age_days": 270,
+"amd64": 29,
+"total": 55
 },
-"0.6.1": {
-"aarch64": 30,
-"age_days": 210,
-"amd64": 68,
-"total": 98
-},
-"0.6.10": {
-"aarch64": 25,
-"age_days": 180,
-"amd64": 63,
-"total": 88
-},
-"0.6.2": {
-"aarch64": 18,
-"age_days": 210,
+"0.5.0-2": {
+"aarch64": 28,
+"age_days": 270,
 "amd64": 31,
-"total": 49
+"total": 59
 },
-"0.6.2-2": {
-"aarch64": 34,
-"age_days": 210,
-"amd64": 60,
-"total": 94
+"0.5.0-4": {
+"aarch64": 29,
+"age_days": 270,
+"amd64": 30,
+"total": 59
 },
-"0.6.3": {
-"aarch64": 36,
-"age_days": 210,
-"amd64": 55,
-"total": 91
-},
-"0.6.3-2": {
-"aarch64": 19,
-"age_days": 210,
-"amd64": 38,
+"0.5.0-5": {
+"aarch64": 26,
+"age_days": 270,
+"amd64": 31,
 "total": 57
 },
-"0.6.3-3": {
-"aarch64": 17,
-"age_days": 210,
-"amd64": 27,
-"total": 44
+"0.5.0-6": {
+"aarch64": 34,
+"age_days": 270,
+"amd64": 46,
+"total": 80
 },
-"0.6.4": {
-"aarch64": 38,
-"age_days": 210,
-"amd64": 63,
-"total": 101
+"0.5.4": {
+"aarch64": 30,
+"age_days": 270,
+"amd64": 36,
+"total": 66
 },
-"0.6.5": {
+"0.5.4-2": {
 "aarch64": 21,
-"age_days": 300,
+"age_days": 270,
 "amd64": 28,
 "total": 49
 },
-"0.6.6": {
-"aarch64": 33,
-"age_days": 210,
+"0.5.4-3": {
+"aarch64": 30,
+"age_days": 270,
+"amd64": 43,
+"total": 73
+},
+"0.5.5": {
+"aarch64": 21,
+"age_days": 240,
+"amd64": 27,
+"total": 48
+},
+"0.5.5-2": {
+"aarch64": 28,
+"age_days": 240,
+"amd64": 39,
+"total": 67
+},
+"0.5.6": {
+"age_days": 240,
 "amd64": 55,
-"total": 88
+"total": 55
 },
-"0.6.6-2": {
-"aarch64": 12,
-"age_days": 210,
-"amd64": 23,
-"total": 35
+"0.5.6-2": {
+"aarch64": 28,
+"age_days": 240,
+"amd64": 30,
+"total": 58
 },
-"0.6.6-3": {
+"0.5.6-3": {
+"age_days": 240,
+"amd64": 41,
+"total": 41
+},
+"0.5.7": {
+"age_days": 240,
+"amd64": 78,
+"total": 78
+},
+"0.5.8": {
 "aarch64": 29,
+"age_days": 240,
+"amd64": 76,
+"total": 105
+},
+"0.6": {
+"aarch64": 24,
+"age_days": 300,
+"amd64": 28,
+"total": 52
+},
+"0.6.0": {
+"aarch64": 28,
 "age_days": 210,
-"amd64": 52,
+"amd64": 53,
 "total": 81
 },
-"0.6.6-4": {
-"aarch64": 24,
+"0.6.1": {
+"aarch64": 31,
+"age_days": 210,
+"amd64": 69,
+"total": 100
+},
+"0.6.10": {
+"aarch64": 26,
 "age_days": 180,
-"amd64": 44,
-"total": 68
+"amd64": 64,
+"total": 90
+},
+"0.6.2": {
+"aarch64": 19,
+"age_days": 210,
+"amd64": 32,
+"total": 51
+},
+"0.6.2-2": {
+"aarch64": 35,
+"age_days": 210,
+"amd64": 61,
+"total": 96
+},
+"0.6.3": {
+"aarch64": 37,
+"age_days": 210,
+"amd64": 56,
+"total": 93
+},
+"0.6.3-2": {
+"aarch64": 20,
+"age_days": 210,
+"amd64": 39,
+"total": 59
+},
+"0.6.3-3": {
+"aarch64": 18,
+"age_days": 210,
+"amd64": 28,
+"total": 46
+},
+"0.6.4": {
+"aarch64": 39,
+"age_days": 210,
+"amd64": 64,
+"total": 103
+},
+"0.6.5": {
+"aarch64": 22,
+"age_days": 300,
+"amd64": 29,
+"total": 51
+},
+"0.6.6": {
+"aarch64": 34,
+"age_days": 210,
+"amd64": 56,
+"total": 90
+},
+"0.6.6-2": {
+"aarch64": 13,
+"age_days": 210,
+"amd64": 24,
+"total": 37
+},
+"0.6.6-3": {
+"aarch64": 30,
+"age_days": 210,
+"amd64": 53,
+"total": 83
+},
+"0.6.6-4": {
+"aarch64": 25,
+"age_days": 180,
+"amd64": 45,
+"total": 70
 },
 "0.6.8": {
-"aarch64": 35,
-"age_days": 180,
-"amd64": 73,
-"total": 108
-},
-"0.7.0": {
-"aarch64": 16,
-"age_days": 180,
-"amd64": 31,
-"total": 47
-},
-"0.7.0-1": {
-"aarch64": 32,
-"age_days": 180,
-"amd64": 59,
-"total": 91
-},
-"0.7.1": {
-"aarch64": 40,
-"age_days": 180,
-"amd64": 78,
-"total": 118
-},
-"0.7.3": {
 "aarch64": 36,
 "age_days": 180,
-"amd64": 73,
-"total": 109
+"amd64": 74,
+"total": 110
 },
-"0.7.4": {
-"aarch64": 55,
-"age_days": 150,
-"amd64": 101,
-"total": 156
+"0.7.0": {
+"aarch64": 17,
+"age_days": 180,
+"amd64": 32,
+"total": 49
 },
-"0.7.5": {
-"aarch64": 31,
-"age_days": 150,
-"amd64": 99,
-"total": 130
+"0.7.0-1": {
+"aarch64": 33,
+"age_days": 180,
+"amd64": 60,
+"total": 93
 },
-"0.8.10": {
-"aarch64": 27,
-"age_days": 60,
-"amd64": 93,
+"0.7.1": {
+"aarch64": 41,
+"age_days": 180,
+"amd64": 79,
 "total": 120
 },
+"0.7.3": {
+"aarch64": 37,
+"age_days": 180,
+"amd64": 74,
+"total": 111
+},
+"0.7.4": {
+"aarch64": 56,
+"age_days": 180,
+"amd64": 102,
+"total": 158
+},
+"0.7.5": {
+"aarch64": 32,
+"age_days": 150,
+"amd64": 100,
+"total": 132
+},
+"0.8.10": {
+"aarch64": 28,
+"age_days": 60,
+"amd64": 94,
+"total": 122
+},
 "0.8.11": {
-"aarch64": 79,
+"aarch64": 80,
 "age_days": 30,
-"amd64": 177,
-"total": 256
+"amd64": 178,
+"total": 258
 },
 "0.8.12": {
-"aarch64": 53,
-"age_days": 10,
-"amd64": 157,
-"total": 210
+"aarch64": 55,
+"age_days": 11,
+"amd64": 163,
+"total": 218
 },
 "0.8.2": {
-"aarch64": 19,
+"aarch64": 20,
 "age_days": 120,
-"amd64": 53,
-"total": 72
+"amd64": 54,
+"total": 74
 },
 "0.8.2-1": {
-"aarch64": 14,
+"aarch64": 15,
 "age_days": 120,
-"amd64": 20,
-"total": 34
+"amd64": 21,
+"total": 36
 },
 "0.8.2.1": {
-"aarch64": 37,
+"aarch64": 38,
 "age_days": 120,
-"amd64": 88,
-"total": 125
+"amd64": 89,
+"total": 127
 },
 "0.8.3": {
-"aarch64": 34,
+"aarch64": 35,
 "age_days": 120,
-"amd64": 64,
-"total": 98
+"amd64": 65,
+"total": 100
 },
 "0.8.4": {
-"aarch64": 42,
+"aarch64": 43,
 "age_days": 120,
-"amd64": 111,
-"total": 153
+"amd64": 112,
+"total": 155
 },
 "0.8.5": {
-"aarch64": 15,
+"aarch64": 16,
 "age_days": 90,
-"amd64": 32,
-"total": 47
+"amd64": 33,
+"total": 49
 },
 "0.8.6": {
-"aarch64": 41,
+"aarch64": 42,
 "age_days": 90,
-"amd64": 96,
-"total": 137
+"amd64": 97,
+"total": 139
 },
 "0.8.8": {
-"aarch64": 46,
+"aarch64": 47,
 "age_days": 90,
-"amd64": 123,
-"total": 169
+"amd64": 124,
+"total": 171
 }
 },
 "alex_weekly": [
@@ -6214,6 +6251,10 @@
 {
 "date": "2026-11-06",
 "value": 178
+},
+{
+"date": "2026-11-13",
+"value": 214
 }
 ],
 "history": [
@@ -7075,22 +7116,31 @@
 "0.8.11": 9,
 "0.8.12": 33
 }
+},
+{
+"auto_update": 13,
+"date": "2026-11-14",
+"total": 42,
+"versions": {
+"0.8.11": 8,
+"0.8.12": 34
+}
 }
 ],
 "latest": {
 "auto_update": 13,
-"date": "2026-11-13",
+"date": "2026-11-14",
 "total": 42,
 "versions": {
-"0.8.11": 9,
-"0.8.12": 33
+"0.8.11": 8,
+"0.8.12": 34
 }
 },
 "reference": {
-"db21ed7f_battybirdnet-pi": 12,
-"db21ed7f_birdnet-go": 310,
+"db21ed7f_battybirdnet-pi": 11,
+"db21ed7f_birdnet-go": 309,
 "db21ed7f_birdnet-pi": 50
 }
 },
-"today": "2026-11-13"
+"today": "2026-11-14"
 }
