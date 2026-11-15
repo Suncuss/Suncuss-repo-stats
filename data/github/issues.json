@@ -1,6 +1,14 @@
 [
 {
 "author": "Marzogh",
+"comments": 0,
+"created": "2026-11-14",
+"is_pr": true,
+"number": 77,
+"state": "open"
+},
+{
+"author": "Marzogh",
 "comments": 2,
 "created": "2026-11-13",
 "is_pr": true,
@@ -13,7 +21,7 @@
 "created": "2026-11-12",
 "is_pr": false,
 "number": 75,
-"state": "open"
+"state": "closed"
 },
 {
 "author": "NJevric",
