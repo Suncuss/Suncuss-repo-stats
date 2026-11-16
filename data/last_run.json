@@ -1,5 +1,7 @@
 {
-"date": "2026-11-15",
-"errors": {},
-"generated": "2026-11-15T03:00:08+00:00"
+"date": "2026-11-16",
+"errors": {
+"ghcr": "HttpError: HTTP 502 for https://github.com/Suncuss/BirdNET-PiPy/pkgs/container/birdnet-pipy-backend/versions?page=5 - <!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\">\n    <meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'none'; base-uri '"
+},
+"generated": "2026-11-16T03:00:14+00:00"
 }

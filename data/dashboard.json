@@ -7,13 +7,15 @@
 "own_stations": 1,
 "station_image": "birdnet-pipy-frontend"
 },
-"errors": {},
+"errors": {
+"ghcr": "HttpError: HTTP 502 for https://github.com/Suncuss/BirdNET-PiPy/pkgs/container/birdnet-pipy-backend/versions?page=5 - <!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\">\n    <meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'none'; base-uri '"
+},
 "estimate": {
 "ha": {
 "auto_update": 13,
 "estimated": 258,
 "high": 258,
-"low": 220,
+"low": 226,
 "method": "pulls of the most-pulled of the two newest add-on versions out at least 7 days (at least the HA analytics opt-in total)",
 "opt_in_rate": 0.17,
 "pulls_base": 258,
@@ -1022,11 +1024,11 @@
 },
 "total": {
 "high": 364,
-"low": 273,
+"low": 279,
 "mid": 311
 }
 },
-"generated": "2026-11-15T03:00:08+00:00",
+"generated": "2026-11-16T03:00:14+00:00",
 "ghcr": {
 "automated": {
 "arch": {
@@ -2647,7 +2649,7 @@
 "batches": 1,
 "created": "2026-11-03T05:46:48",
 "current": true,
-"days_live": 12.8,
+"days_live": 13.8,
 "index": 429,
 "mixed": false,
 "other_images": {
@@ -5678,6 +5680,13 @@
 "date": "2026-11-13",
 "views": 33,
 "views_unique": 6
+},
+{
+"clones": 4,
+"clones_unique": 4,
+"date": "2026-11-14",
+"views": 57,
+"views_unique": 12
 }
 ],
 "monthly": [
@@ -5752,11 +5761,11 @@
 "views_unique": 92
 },
 {
-"clones": 109,
-"clones_unique": 60,
+"clones": 113,
+"clones_unique": 64,
 "month": "2026-11",
-"views": 177,
-"views_unique": 66
+"views": 234,
+"views_unique": 78
 }
 ]
 }
@@ -6066,14 +6075,14 @@
 "total": 258
 },
 "0.8.12": {
-"aarch64": 55,
-"age_days": 12,
-"amd64": 165,
-"total": 220
+"aarch64": 57,
+"age_days": 13,
+"amd64": 169,
+"total": 226
 },
 "0.8.2": {
 "aarch64": 20,
-"age_days": 120,
+"age_days": 150,
 "amd64": 54,
 "total": 74
 },
@@ -7163,11 +7172,20 @@
 "0.8.11": 7,
 "0.8.12": 36
 }
+},
+{
+"auto_update": 13,
+"date": "2026-11-16",
+"total": 43,
+"versions": {
+"0.8.11": 7,
+"0.8.12": 36
+}
 }
 ],
 "latest": {
 "auto_update": 13,
-"date": "2026-11-15",
+"date": "2026-11-16",
 "total": 43,
 "versions": {
 "0.8.11": 7,
@@ -7176,9 +7194,9 @@
 },
 "reference": {
 "db21ed7f_battybirdnet-pi": 11,
-"db21ed7f_birdnet-go": 308,
-"db21ed7f_birdnet-pi": 50
+"db21ed7f_birdnet-go": 305,
+"db21ed7f_birdnet-pi": 48
 }
 },
-"today": "2026-11-15"
+"today": "2026-11-16"
 }
