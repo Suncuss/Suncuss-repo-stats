@@ -54,6 +54,9 @@
 ],
 "kind": "pidx"
 },
+"025a9d6eba6a33c5075a4ba659acbf3a723e2553454a2d10f7ae0882ca347d3d": {
+"kind": "attest"
+},
 "03610519316ad5e5f25cbd6764b687c7e0d3e5ae0978a7e769092dde6c6bb5c2": {
 "kind": "attest"
 },
@@ -546,6 +549,19 @@
 },
 "19524ab3ae9859ea9ead0f89fe980f77e17913b030c81006086688f12afaacab": {
 "kind": "attest"
+},
+"196a94d1320e3388bcebe60b44123387c5790299d15b2c6b11506fcd717db0cd": {
+"children": [
+{
+"arch": "amd64",
+"digest": "sha256:3ad298227cd51061ec99b4de939754207c851183b4ee74f9b99a3a81dc0c1543"
+},
+{
+"arch": "attest",
+"digest": "sha256:a6d7e6b12a1cd19dd92f7586fb5b7faf5b8fa36e01c95f05fae542061e69f525"
+}
+],
+"kind": "pidx"
 },
 "19c910a92d41ae290140de247dedf65e60ea4def2a6582eed2c33482f0435728": {
 "kind": "attest"
@@ -1106,6 +1122,11 @@
 }
 ],
 "kind": "index"
+},
+"3ad298227cd51061ec99b4de939754207c851183b4ee74f9b99a3a81dc0c1543": {
+"arch": "amd64",
+"created": "2026-11-18T02:44:01",
+"kind": "manifest"
 },
 "3b6ed6123447810e817e25588396a0d257325d79b350b4ab25e10c9fec2e8cd0": {
 "kind": "attest"
@@ -2715,6 +2736,27 @@
 "a343d3f64dc4b59b0dfae26889522052554c69255ed4f3858a3a4a71af6d5394": {
 "kind": "attest"
 },
+"a370f867795ecf8e27105310b1ea7d21a1a540ee3258756e931bb49884521467": {
+"children": [
+{
+"arch": "amd64",
+"digest": "sha256:3ad298227cd51061ec99b4de939754207c851183b4ee74f9b99a3a81dc0c1543"
+},
+{
+"arch": "attest",
+"digest": "sha256:a6d7e6b12a1cd19dd92f7586fb5b7faf5b8fa36e01c95f05fae542061e69f525"
+},
+{
+"arch": "arm64",
+"digest": "sha256:b8e307c808065f0ad5458c5720b87acc7312e3e3558cb9b799772b1075eada04"
+},
+{
+"arch": "attest",
+"digest": "sha256:025a9d6eba6a33c5075a4ba659acbf3a723e2553454a2d10f7ae0882ca347d3d"
+}
+],
+"kind": "index"
+},
 "a42b6e6420711b18e57e5dd21045fdd02a159b5894a19d98522b9a559fe84da7": {
 "children": [
 {
@@ -2761,6 +2803,9 @@
 }
 ],
 "kind": "pidx"
+},
+"a6d7e6b12a1cd19dd92f7586fb5b7faf5b8fa36e01c95f05fae542061e69f525": {
+"kind": "attest"
 },
 "a6ec2b08cbacfb742e9476ff610fa0bd29cd40393005d4b54cb2a461d7207bc3": {
 "children": [
@@ -3087,6 +3132,19 @@
 ],
 "kind": "pidx"
 },
+"b67c4760a4ef91aa89b4c871d0bcc418a5e4a967e7b1ddc6bb18738a09408d12": {
+"children": [
+{
+"arch": "arm64",
+"digest": "sha256:b8e307c808065f0ad5458c5720b87acc7312e3e3558cb9b799772b1075eada04"
+},
+{
+"arch": "attest",
+"digest": "sha256:025a9d6eba6a33c5075a4ba659acbf3a723e2553454a2d10f7ae0882ca347d3d"
+}
+],
+"kind": "pidx"
+},
 "b6efa143d0dcd754b1efae304185f0e80d42331ed4669c156690e661108cc2b2": {
 "kind": "attest"
 },
@@ -3166,6 +3224,11 @@
 }
 ],
 "kind": "pidx"
+},
+"b8e307c808065f0ad5458c5720b87acc7312e3e3558cb9b799772b1075eada04": {
+"arch": "arm64",
+"created": "2026-11-18T02:43:57",
+"kind": "manifest"
 },
 "bad4ab90c5832516934d5ca1e5f71cf8299876429dbdd24ce7d547cf4ac6e08b": {
 "children": [
